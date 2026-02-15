@@ -5,23 +5,34 @@ export interface PricingCardProps {
   name: string;
   price: string;
   period: string;
+  priceYearly?: string;
+  periodYearly?: string;
   description: string;
   features: string[];
   ctaLabel: string;
   ctaHref: string;
   highlighted?: boolean;
+  billingPeriod?: "monthly" | "yearly";
 }
 
 export function PricingCard({
   name,
   price,
   period,
+  priceYearly,
+  periodYearly,
   description,
   features,
   ctaLabel,
   ctaHref,
   highlighted = false,
+  billingPeriod = "monthly",
 }: PricingCardProps) {
+  const displayPrice =
+    billingPeriod === "yearly" && priceYearly ? priceYearly : price;
+  const displayPeriod =
+    billingPeriod === "yearly" && periodYearly ? periodYearly : period;
+
   return (
     <div
       className={`pricing-toggle-transition p-8 rounded-xl h-full flex flex-col ${
@@ -33,8 +44,8 @@ export function PricingCard({
       <h3 className="text-xl font-semibold mb-2">{name}</h3>
       <p className="text-zinc-400 text-sm mb-6">{description}</p>
       <div className="mb-6">
-        <span className="text-4xl font-bold">{price}</span>
-        <span className="text-zinc-500 text-sm ml-1">{period}</span>
+        <span className="text-4xl font-bold">{displayPrice}</span>
+        <span className="text-zinc-500 text-sm ml-1">{displayPeriod}</span>
       </div>
       <ul className="space-y-3 mb-8 flex-1">
         {features.map((feature, i) => (

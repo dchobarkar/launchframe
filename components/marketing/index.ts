@@ -2,6 +2,7 @@ export { HeroBlock } from "./HeroBlock";
 export { Nav } from "./Nav";
 export { FeatureCard } from "./FeatureCard";
 export { PricingCard } from "./PricingCard";
+export { PricingSection } from "./PricingSection";
 export { TestimonialCard } from "./TestimonialCard";
 export { LogoCloud } from "./LogoCloud";
 export { CTASection } from "./CTASection";

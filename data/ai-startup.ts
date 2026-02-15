@@ -6,8 +6,8 @@ export const aiStartupData: LandingPageData = {
     headline: "Your AI copilot for work",
     subtext:
       "Automate tasks, draft documents, and get instant answers. Copilot AI works alongside you in every app — no context switching.",
-    primaryCta: { label: "Try Copilot free", href: "#" },
-    secondaryCta: { label: "See how it works", href: "#" },
+    primaryCta: { label: "Try Copilot free", href: "#pricing" },
+    secondaryCta: { label: "See how it works", href: "#features" },
     trustBadges: [
       "Used by 10,000+ professionals",
       "Google",
@@ -111,6 +111,8 @@ export const aiStartupData: LandingPageData = {
         name: "Free",
         price: "$0",
         period: "/mo",
+        priceYearly: "$0",
+        periodYearly: "/yr",
         description: "For trying Copilot",
         features: [
           "50 tasks/month",
@@ -119,12 +121,14 @@ export const aiStartupData: LandingPageData = {
           "Community access",
         ],
         ctaLabel: "Get started",
-        ctaHref: "#",
+        ctaHref: "#pricing",
       },
       {
         name: "Pro",
         price: "$29",
         period: "/mo",
+        priceYearly: "$23",
+        periodYearly: "/mo",
         description: "For power users",
         features: [
           "Unlimited tasks",
@@ -134,7 +138,7 @@ export const aiStartupData: LandingPageData = {
           "API access",
         ],
         ctaLabel: "Start free trial",
-        ctaHref: "#",
+        ctaHref: "#pricing",
         highlighted: true,
       },
       {
@@ -150,7 +154,7 @@ export const aiStartupData: LandingPageData = {
           "SSO",
         ],
         ctaLabel: "Contact sales",
-        ctaHref: "#",
+        ctaHref: "#faq",
       },
     ],
   },
@@ -209,7 +213,7 @@ export const aiStartupData: LandingPageData = {
   cta: {
     headline: "Launch your AI assistant today",
     subtext: "Free forever for individuals. No credit card required.",
-    primaryCta: { label: "Try Copilot free", href: "#" },
-    secondaryCta: { label: "Watch demo", href: "#" },
+    primaryCta: { label: "Try Copilot free", href: "#pricing" },
+    secondaryCta: { label: "Watch demo", href: "#features" },
   },
 };

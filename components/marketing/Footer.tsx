@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Github, Twitter, Linkedin } from "lucide-react";
+import { NewsletterForm } from "@/components/ui/NewsletterForm";
 
 export interface FooterProps {
   productName: string;
@@ -7,10 +8,21 @@ export interface FooterProps {
   legalLinks?: { label: string; href: string }[];
 }
 
+const defaultNavLinks = [
+  { label: "Features", href: "#features" },
+  { label: "Pricing", href: "#pricing" },
+  { label: "Integrations", href: "#integrations" },
+];
+
+const defaultLegalLinks = [
+  { label: "Privacy", href: "#faq" },
+  { label: "Terms", href: "#faq" },
+];
+
 export function Footer({
   productName,
-  navLinks = [],
-  legalLinks = [],
+  navLinks = defaultNavLinks,
+  legalLinks = defaultLegalLinks,
 }: FooterProps) {
   const socialLinks = [
     { icon: Twitter, href: "#", label: "Twitter" },
@@ -43,8 +55,8 @@ export function Footer({
           <div>
             <h4 className="font-medium mb-4">Product</h4>
             <ul className="space-y-3">
-              {navLinks.length > 0 ? (
-                navLinks.map((link) => (
+              {(navLinks?.length ?? 0) > 0 ? (
+                navLinks!.map((link) => (
                   <li key={link.href}>
                     <Link
                       href={link.href}
@@ -55,40 +67,24 @@ export function Footer({
                   </li>
                 ))
               ) : (
-                <>
-                  <li>
+                defaultNavLinks.map((link) => (
+                  <li key={link.href}>
                     <Link
-                      href="#"
+                      href={link.href}
                       className="text-zinc-500 hover:text-zinc-300 text-sm"
                     >
-                      Features
+                      {link.label}
                     </Link>
                   </li>
-                  <li>
-                    <Link
-                      href="#"
-                      className="text-zinc-500 hover:text-zinc-300 text-sm"
-                    >
-                      Pricing
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="#"
-                      className="text-zinc-500 hover:text-zinc-300 text-sm"
-                    >
-                      Integrations
-                    </Link>
-                  </li>
-                </>
+                ))
               )}
             </ul>
           </div>
           <div>
             <h4 className="font-medium mb-4">Legal</h4>
             <ul className="space-y-3">
-              {legalLinks.length > 0 ? (
-                legalLinks.map((link) => (
+              {(legalLinks?.length ?? 0) > 0 ? (
+                legalLinks!.map((link) => (
                   <li key={link.href}>
                     <Link
                       href={link.href}
@@ -99,24 +95,16 @@ export function Footer({
                   </li>
                 ))
               ) : (
-                <>
-                  <li>
+                defaultLegalLinks.map((link) => (
+                  <li key={link.href}>
                     <Link
-                      href="#"
+                      href={link.href}
                       className="text-zinc-500 hover:text-zinc-300 text-sm"
                     >
-                      Privacy
+                      {link.label}
                     </Link>
                   </li>
-                  <li>
-                    <Link
-                      href="#"
-                      className="text-zinc-500 hover:text-zinc-300 text-sm"
-                    >
-                      Terms
-                    </Link>
-                  </li>
-                </>
+                ))
               )}
             </ul>
           </div>
@@ -125,19 +113,7 @@ export function Footer({
           <p className="text-zinc-600 text-sm">
             © {new Date().getFullYear()} {productName}. All rights reserved.
           </p>
-          <div className="flex items-center gap-2">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-sm placeholder:text-zinc-500 focus:outline-none accent-focus w-48"
-            />
-            <button
-              type="button"
-              className="px-4 py-2 rounded-lg accent-bg-muted accent-text text-sm font-medium hover:accent-bg-muted-strong transition-colors"
-            >
-              Subscribe
-            </button>
-          </div>
+          <NewsletterForm />
         </div>
       </div>
     </footer>

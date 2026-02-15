@@ -33,7 +33,11 @@ export default function AIStartupLayout({
         links={aiStartupNavConfig.links}
       />
       {children}
-      <Footer productName={aiStartupNavConfig.productName} />
+      <Footer
+        productName={aiStartupNavConfig.productName}
+        navLinks={aiStartupNavConfig.links}
+        legalLinks={aiStartupNavConfig.legalLinks}
+      />
     </div>
   );
 }

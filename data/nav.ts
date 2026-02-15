@@ -3,6 +3,7 @@ import type { CtaLink } from "./types";
 export interface NavConfig {
   productName: string;
   links: CtaLink[];
+  legalLinks: CtaLink[];
 }
 
 export const saasNavConfig: NavConfig = {
@@ -11,6 +12,10 @@ export const saasNavConfig: NavConfig = {
     { label: "Features", href: "#features" },
     { label: "Pricing", href: "#pricing" },
     { label: "Integrations", href: "#integrations" },
+  ],
+  legalLinks: [
+    { label: "Privacy", href: "#faq" },
+    { label: "Terms", href: "#faq" },
   ],
 };
 
@@ -21,6 +26,10 @@ export const aiStartupNavConfig: NavConfig = {
     { label: "Pricing", href: "#pricing" },
     { label: "Integrations", href: "#integrations" },
   ],
+  legalLinks: [
+    { label: "Privacy", href: "#faq" },
+    { label: "Terms", href: "#faq" },
+  ],
 };
 
 export const creatorToolNavConfig: NavConfig = {
@@ -29,5 +38,9 @@ export const creatorToolNavConfig: NavConfig = {
     { label: "Features", href: "#features" },
     { label: "Pricing", href: "#pricing" },
     { label: "Templates", href: "#templates" },
+  ],
+  legalLinks: [
+    { label: "Privacy", href: "#faq" },
+    { label: "Terms", href: "#faq" },
   ],
 };
