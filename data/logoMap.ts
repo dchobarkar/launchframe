@@ -24,4 +24,13 @@ export const LOGO_ICON_MAP: Record<string, string> = {
   Gmail: "SiGmail",
   "Google Drive": "SiGoogledrive",
   Vimeo: "SiVimeo",
+  Shopify: "SiShopify",
+  Mailchimp: "mailchimp.com",
+  Klaviyo: "klaviyo.com",
+  Plaid: "plaid.com",
+  Nike: "nike.com",
+  Airbnb: "airbnb.com",
+  Spotify: "SiSpotify",
+  Ramp: "ramp.com",
+  Mercury: "mercury.com",
 };

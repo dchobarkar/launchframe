@@ -47,3 +47,73 @@ export const creatorToolNavConfig: NavConfig = {
     { label: "Terms", href: "/creator-tool/terms" },
   ],
 };
+
+export const agencyNavConfig: NavConfig = {
+  productName: "Lumina Studio",
+  links: [
+    { label: "Work", href: "/agency#features" },
+    { label: "Services", href: "/agency#features" },
+    { label: "Pricing", href: "/agency#pricing" },
+    { label: "Contact", href: "/agency#contact" },
+  ],
+  legalLinks: [
+    { label: "Privacy", href: "/agency/privacy" },
+    { label: "Terms", href: "/agency/terms" },
+  ],
+};
+
+export const devToolsNavConfig: NavConfig = {
+  productName: "APIbase",
+  links: [
+    { label: "Features", href: "/dev-tools#features" },
+    { label: "Pricing", href: "/dev-tools#pricing" },
+    { label: "Integrations", href: "/dev-tools#integrations" },
+    { label: "Contact", href: "/dev-tools#contact" },
+  ],
+  legalLinks: [
+    { label: "Privacy", href: "/dev-tools/privacy" },
+    { label: "Terms", href: "/dev-tools/terms" },
+  ],
+};
+
+export const ecommerceNavConfig: NavConfig = {
+  productName: "Storefront",
+  links: [
+    { label: "Features", href: "/ecommerce#features" },
+    { label: "Pricing", href: "/ecommerce#pricing" },
+    { label: "Integrations", href: "/ecommerce#integrations" },
+    { label: "Contact", href: "/ecommerce#contact" },
+  ],
+  legalLinks: [
+    { label: "Privacy", href: "/ecommerce/privacy" },
+    { label: "Terms", href: "/ecommerce/terms" },
+  ],
+};
+
+export const fintechNavConfig: NavConfig = {
+  productName: "PayStack",
+  links: [
+    { label: "Features", href: "/fintech#features" },
+    { label: "Pricing", href: "/fintech#pricing" },
+    { label: "Integrations", href: "/fintech#integrations" },
+    { label: "Contact", href: "/fintech#contact" },
+  ],
+  legalLinks: [
+    { label: "Privacy", href: "/fintech/privacy" },
+    { label: "Terms", href: "/fintech/terms" },
+  ],
+};
+
+export const marketingNavConfig: NavConfig = {
+  productName: "GrowthLab",
+  links: [
+    { label: "Features", href: "/marketing#features" },
+    { label: "Pricing", href: "/marketing#pricing" },
+    { label: "Integrations", href: "/marketing#integrations" },
+    { label: "Contact", href: "/marketing#contact" },
+  ],
+  legalLinks: [
+    { label: "Privacy", href: "/marketing/privacy" },
+    { label: "Terms", href: "/marketing/terms" },
+  ],
+};

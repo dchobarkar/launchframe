@@ -4,7 +4,7 @@ export const variantLinks: VariantLink[] = [
   {
     slug: "saas",
     name: "SaaS Product",
-    description: "Analytics platform / AI tool / Dev product",
+    description: "Analytics platform / dashboards / product insights",
     iconKey: "BarChart3",
     href: "/saas",
   },
@@ -22,10 +22,45 @@ export const variantLinks: VariantLink[] = [
     iconKey: "Palette",
     href: "/creator-tool",
   },
+  {
+    slug: "agency",
+    name: "Agency",
+    description: "Brand studio / design agency / consulting",
+    iconKey: "Layout",
+    href: "/agency",
+  },
+  {
+    slug: "dev-tools",
+    name: "Developer Tool",
+    description: "API platform / dev tools / infrastructure",
+    iconKey: "GitBranch",
+    href: "/dev-tools",
+  },
+  {
+    slug: "ecommerce",
+    name: "E-commerce",
+    description: "Storefront / marketplace / retail",
+    iconKey: "Zap",
+    href: "/ecommerce",
+  },
+  {
+    slug: "fintech",
+    name: "FinTech",
+    description: "Payments / banking / financial infra",
+    iconKey: "Shield",
+    href: "/fintech",
+  },
+  {
+    slug: "marketing",
+    name: "Marketing",
+    description: "Growth / email / campaign platform",
+    iconKey: "TrendingUp",
+    href: "/marketing",
+  },
 ];
 
 export const homeContent = {
   title: "LaunchFrame",
   description:
-    "Modular landing page framework for SaaS, AI, and product marketing websites.",
+    "Modular landing page framework for SaaS, AI, agency, e-commerce, fintech, and marketing websites.",
 };

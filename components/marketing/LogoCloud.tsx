@@ -18,6 +18,8 @@ import {
   SiMedium,
   SiSubstack,
   SiYoutube,
+  SiShopify,
+  SiSpotify,
 } from "@icons-pack/react-simple-icons";
 import { LOGO_ICON_MAP } from "@/data/logoMap";
 
@@ -45,6 +47,8 @@ const ICON_COMPONENTS: Record<
   SiMedium,
   SiSubstack,
   SiYoutube,
+  SiShopify,
+  SiSpotify,
 };
 
 function LogoItem({ name }: { name: string }) {

@@ -1,11 +1,12 @@
 import { LegalPage } from "@/components/legal/LegalPage";
 import { privacyContent } from "@/data/legal";
-import { creatorToolNavConfig } from "@/data";
+import { creatorToolNavConfig, getLegalMetadata } from "@/data";
 
-export const metadata = {
-  title: "Privacy Policy — Portify",
-  description: "Portify privacy policy. Learn how we collect, use, and protect your data.",
-};
+export const metadata = getLegalMetadata(
+  creatorToolNavConfig.productName,
+  "privacy",
+  "/creator-tool/privacy"
+);
 
 export default function PrivacyPage() {
   return (

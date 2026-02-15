@@ -1,0 +1,8 @@
+/* FinTech variant — Blue theme (PayStack) */
+[data-variant="fintech"] {
+  --accent: #3b82f6;
+  --accent-muted: rgba(59, 130, 246, 0.2);
+  --accent-muted-strong: rgba(59, 130, 246, 0.3);
+  --accent-glow: rgba(59, 130, 246, 0.4);
+  --accent-glow-secondary: rgba(96, 165, 250, 0.3);
+}

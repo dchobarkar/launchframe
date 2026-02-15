@@ -1,11 +1,12 @@
 import { LegalPage } from "@/components/legal/LegalPage";
 import { termsContent } from "@/data/legal";
-import { saasNavConfig } from "@/data";
+import { getLegalMetadata, saasNavConfig } from "@/data";
 
-export const metadata = {
-  title: "Terms of Service — MetricFlow",
-  description: "MetricFlow terms of service. Read our terms and conditions.",
-};
+export const metadata = getLegalMetadata(
+  saasNavConfig.productName,
+  "terms",
+  "/saas/terms"
+);
 
 export default function TermsPage() {
   return (

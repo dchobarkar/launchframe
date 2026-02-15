@@ -1,0 +1,8 @@
+/* Marketing/Growth variant — Rose/red theme (GrowthLab) */
+[data-variant="marketing"] {
+  --accent: #f43f5e;
+  --accent-muted: rgba(244, 63, 94, 0.2);
+  --accent-muted-strong: rgba(244, 63, 94, 0.3);
+  --accent-glow: rgba(244, 63, 94, 0.4);
+  --accent-glow-secondary: rgba(251, 113, 133, 0.3);
+}

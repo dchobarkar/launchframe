@@ -5,26 +5,30 @@ import { getVariantIcon } from "@/data/icons";
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center px-4 py-12 sm:py-16 md:py-24">
+    <main className="min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 py-12 sm:py-16 md:py-24">
       <div
-        className="absolute inset-0 -z-10"
+        className="fixed inset-0 -z-10"
         style={{
           background: `linear-gradient(180deg, var(--gradient-start) 0%, var(--gradient-mid) 50%, var(--gradient-end) 100%)`,
         }}
       />
-      <div className="text-center max-w-2xl">
-        <h1 className="text-4xl sm:text-5xl font-bold mb-4">
-          {homeContent.title}
-        </h1>
-        <p className="text-zinc-400 text-lg mb-12">{homeContent.description}</p>
-        <div className="grid sm:grid-cols-3 gap-6">
+      <div className="w-full max-w-6xl mx-auto">
+        <div className="text-center mb-12">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+            {homeContent.title}
+          </h1>
+          <p className="text-zinc-400 text-base sm:text-lg mb-8 sm:mb-12 max-w-2xl mx-auto px-2">
+            {homeContent.description}
+          </p>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
           {variantLinks.map((variant) => {
             const Icon = getVariantIcon(variant.iconKey);
             return (
               <Link
                 key={variant.slug}
                 href={variant.href}
-                className="group glass-card p-6 rounded-xl text-left accent-hover-border transition-colors"
+                className="group glass-card p-5 sm:p-6 rounded-xl text-left accent-hover-border transition-colors min-w-0"
               >
                 <Icon className="w-8 h-8 accent-text mb-4" />
                 <h2 className="font-semibold mb-2 group-hover-accent transition-colors">
