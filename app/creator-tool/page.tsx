@@ -44,9 +44,9 @@ export default function CreatorToolPage() {
 
       <LogoCloud headline={logoCloud.headline} logos={logoCloud.logos} />
 
-      <section id="features" className="py-20 scroll-mt-20">
+      <section id="features" className="py-16 md:py-20 scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12 md:mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold mb-4">
               {features.headline}
             </h2>
@@ -54,7 +54,7 @@ export default function CreatorToolPage() {
               {features.subtext}
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {features.items.map((item, i) => (
               <FeatureCard
                 key={i}
@@ -92,9 +92,9 @@ export default function CreatorToolPage() {
         items={pricing.items}
       />
 
-      <section className="py-20">
+      <section className="py-16 md:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12 md:mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold mb-4">
               {testimonials.headline}
             </h2>

@@ -17,10 +17,10 @@ export function FAQAccordion({ headline, items }: FAQAccordionProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="py-20 scroll-mt-20">
+    <section id="faq" className="py-16 md:py-20 scroll-mt-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 md:mb-16">
             {headline}
           </h2>
           <div className="space-y-2">
@@ -28,7 +28,7 @@ export function FAQAccordion({ headline, items }: FAQAccordionProps) {
               <div key={i} className="glass-card rounded-xl overflow-hidden">
                 <button
                   onClick={() => setOpenIndex(openIndex === i ? null : i)}
-                  className="w-full px-6 py-4 flex items-center justify-between text-left hover:bg-white/5 transition-colors"
+                  className="w-full px-4 sm:px-6 py-3.5 sm:py-4 flex items-center justify-between text-left hover:bg-white/5 transition-colors"
                 >
                   <span className="font-medium">{item.question}</span>
                   <ChevronDown
@@ -43,7 +43,7 @@ export function FAQAccordion({ headline, items }: FAQAccordionProps) {
                   }`}
                 >
                   <div className="overflow-hidden">
-                    <div className="px-6 pb-4 text-zinc-400 text-sm">
+                    <div className="px-4 sm:px-6 pb-4 text-zinc-400 text-sm">
                       {item.answer}
                     </div>
                   </div>

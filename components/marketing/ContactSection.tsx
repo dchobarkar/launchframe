@@ -41,10 +41,10 @@ export function ContactSection({
   };
 
   return (
-    <section id={id} className="py-20 scroll-mt-20">
+    <section id={id} className="py-16 md:py-20 scroll-mt-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl mx-auto">
-          <div className="text-center mb-12">
+          <div className="text-center mb-12 md:mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold mb-4">{headline}</h2>
             {subtext && (
               <p className="text-zinc-400 max-w-xl mx-auto">{subtext}</p>
@@ -52,7 +52,7 @@ export function ContactSection({
           </div>
 
           {status === "success" ? (
-            <div className="glass-card rounded-xl p-12 text-center">
+            <div className="glass-card rounded-xl px-5 py-10 sm:px-8 sm:py-12 md:py-16 text-center">
               <div className="w-16 h-16 rounded-full bg-green-500/20 flex items-center justify-center mx-auto mb-6">
                 <Check className="w-8 h-8 text-green-400" />
               </div>
@@ -71,7 +71,7 @@ export function ContactSection({
           ) : (
             <form
               onSubmit={handleSubmit}
-              className="glass-card rounded-xl p-8 space-y-6"
+              className="glass-card rounded-xl p-5 sm:p-8 space-y-5 sm:space-y-6"
             >
               <div>
                 <label htmlFor="contact-name" className="block text-sm font-medium mb-2">

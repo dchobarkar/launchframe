@@ -29,11 +29,11 @@ export function PlanActivationModal({
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm"
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/60 backdrop-blur-sm"
       onClick={onClose}
     >
       <div
-        className="relative glass-card rounded-2xl p-8 max-w-md w-full border border-white/10 shadow-2xl"
+        className="relative glass-card rounded-2xl p-5 sm:p-8 max-w-md w-full border border-white/10 shadow-2xl"
         onClick={(e) => e.stopPropagation()}
       >
         <button

@@ -45,7 +45,7 @@ export function PricingCard({
 
   return (
     <div
-      className={`pricing-toggle-transition p-8 rounded-xl h-full flex flex-col ${
+      className={`pricing-toggle-transition p-5 sm:p-8 rounded-xl h-full flex flex-col ${
         highlighted
           ? "glass-card accent-border accent-bg-muted scale-[1.02]"
           : "glass-card"

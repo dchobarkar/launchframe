@@ -15,7 +15,7 @@ export function FeatureCard({
 }: FeatureCardProps) {
   return (
     <div
-      className={`feature-card-hover p-6 rounded-xl ${
+      className={`feature-card-hover p-5 sm:p-6 rounded-xl ${
         highlighted
           ? "glass-card accent-border-muted accent-bg-muted"
           : "glass-card"

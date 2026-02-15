@@ -32,9 +32,9 @@ export function Footer({
   ];
 
   return (
-    <footer className="border-t border-white/5 py-16">
+    <footer className="border-t border-white/5 py-16 md:py-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12">
           <div className="md:col-span-2">
             <h3 className="text-xl font-semibold mb-4">{productName}</h3>
             <p className="text-zinc-500 text-sm mb-6 max-w-sm">
@@ -108,7 +108,7 @@ export function Footer({
             </ul>
           </div>
         </div>
-        <div className="mt-12 pt-8 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center gap-4">
+        <div className="mt-12 pt-6 md:mt-16 md:pt-8 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-zinc-600 text-sm">
             © {new Date().getFullYear()} {productName}. All rights reserved.
           </p>

@@ -17,7 +17,7 @@ export function LegalPage({
   productName,
 }: LegalPageProps) {
   return (
-    <main className="pt-24 pb-20">
+    <main className="pt-20 sm:pt-24 pb-16 sm:pb-24">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <Link
           href={backHref}

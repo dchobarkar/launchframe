@@ -25,14 +25,14 @@ export function NewsletterForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex items-center gap-2">
+    <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 w-full sm:w-auto">
       <input
         type="email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         placeholder="Enter your email"
         disabled={status === "loading"}
-        className="px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-sm placeholder:text-zinc-500 focus:outline-none accent-focus w-48 disabled:opacity-50"
+        className="px-4 py-2.5 sm:py-2 rounded-lg bg-white/5 border border-white/10 text-sm placeholder:text-zinc-500 focus:outline-none accent-focus w-full sm:w-48 min-w-0 disabled:opacity-50"
         aria-label="Email for newsletter"
       />
       <button
