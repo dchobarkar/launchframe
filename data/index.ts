@@ -7,6 +7,14 @@ export {
   getLegalMetadata,
   SITE_URL,
 } from "./metadata";
+export {
+  VARIANT_SLUGS,
+  type VariantSlug,
+  getVariantConfig,
+  getVariantData,
+  getNavConfig,
+  getSitemapRoutes,
+} from "./variants";
 export { saasData } from "./saas";
 export { aiStartupData } from "./ai-startup";
 export { creatorToolData } from "./creator-tool";

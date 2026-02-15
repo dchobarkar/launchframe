@@ -1,5 +1,6 @@
 export { HeroBlock } from "./HeroBlock";
 export { Nav } from "./Nav";
+export { SectionWithHeadline } from "./SectionWithHeadline";
 export { FeatureCard } from "./FeatureCard";
 export { PricingCard } from "./PricingCard";
 export { PricingSection } from "./PricingSection";

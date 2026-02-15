@@ -8,7 +8,15 @@ export interface HeroBlockProps {
   trustBadges?: string[];
   announcementBanner?: string;
   productMockup?: React.ReactNode;
-  variant?: "saas" | "ai" | "creator" | "agency" | "dev-tools" | "ecommerce" | "fintech" | "marketing";
+  variant?:
+    | "saas"
+    | "ai"
+    | "creator"
+    | "agency"
+    | "dev-tools"
+    | "ecommerce"
+    | "fintech"
+    | "marketing";
 }
 
 export function HeroBlock({

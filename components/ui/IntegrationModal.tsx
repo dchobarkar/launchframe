@@ -1,81 +1,12 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Image from "next/image";
 import { X, Check, Loader2 } from "lucide-react";
-import {
-  SiZapier,
-  SiSnowflake,
-  SiNotion,
-  SiGmail,
-  SiGoogledrive,
-  SiFigma,
-  SiLinear,
-  SiVimeo,
-  SiYoutube,
-  SiGithub,
-  SiBehance,
-  SiDribbble,
-  SiStripe,
-  SiVercel,
-} from "@icons-pack/react-simple-icons";
-import { LOGO_ICON_MAP } from "@/data/logoMap";
-
-const ICON_COMPONENTS: Record<
-  string,
-  React.ComponentType<{ size?: number; color?: string }>
-> = {
-  SiZapier,
-  SiSnowflake,
-  SiNotion,
-  SiGmail,
-  SiGoogledrive,
-  SiFigma,
-  SiLinear,
-  SiVimeo,
-  SiYoutube,
-  SiGithub,
-  SiBehance,
-  SiDribbble,
-  SiStripe,
-  SiVercel,
-};
+import { IntegrationLogo } from "@/components/ui/IntegrationLogo";
 
 interface IntegrationModalProps {
   name: string;
   onClose: () => void;
-}
-
-function IntegrationLogo({ name }: { name: string }) {
-  const key = LOGO_ICON_MAP[name];
-  const isDomain = key?.includes(".");
-  const IconComponent = key && !isDomain ? ICON_COMPONENTS[key] : null;
-
-  if (isDomain) {
-    return (
-      <div className="w-16 h-16 rounded-xl bg-white/95 flex items-center justify-center p-2">
-        <Image
-          src={`https://logo.clearbit.com/${key}`}
-          alt={name}
-          width={48}
-          height={48}
-          className="object-contain"
-        />
-      </div>
-    );
-  }
-  if (IconComponent) {
-    return (
-      <div className="w-16 h-16 rounded-xl bg-white/95 flex items-center justify-center p-2.5">
-        <IconComponent size={36} color="default" />
-      </div>
-    );
-  }
-  return (
-    <div className="w-16 h-16 rounded-xl bg-white/95 flex items-center justify-center">
-      <span className="font-bold text-xl text-zinc-600">{name.charAt(0)}</span>
-    </div>
-  );
 }
 
 export function IntegrationModal({ name, onClose }: IntegrationModalProps) {
@@ -107,7 +38,7 @@ export function IntegrationModal({ name, onClose }: IntegrationModalProps) {
 
         <div className="flex flex-col items-center text-center">
           <div className="mb-6">
-            <IntegrationLogo name={name} />
+            <IntegrationLogo name={name} size="lg" />
           </div>
           <h3 className="text-xl font-semibold mb-2">
             {status === "connecting" ? "Connecting to " : "Connected to "}

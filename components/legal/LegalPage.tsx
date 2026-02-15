@@ -38,10 +38,7 @@ export function LegalPage({
                 <h2 className="text-xl font-semibold mb-4">{section.title}</h2>
                 <div className="space-y-4">
                   {section.content.map((paragraph, j) => (
-                    <p
-                      key={j}
-                      className="text-zinc-400 leading-relaxed"
-                    >
+                    <p key={j} className="text-zinc-400 leading-relaxed">
                       {paragraph}
                     </p>
                   ))}

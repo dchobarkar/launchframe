@@ -33,4 +33,8 @@ export const LOGO_ICON_MAP: Record<string, string> = {
   Spotify: "SiSpotify",
   Ramp: "ramp.com",
   Mercury: "mercury.com",
+  ShipStation: "shipstation.com",
+  BigCommerce: "bigcommerce.com",
+  Dwolla: "dwolla.com",
+  Synapse: "synapsefi.com",
 };
