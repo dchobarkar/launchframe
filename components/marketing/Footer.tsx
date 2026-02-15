@@ -1,0 +1,145 @@
+import Link from "next/link";
+import { Github, Twitter, Linkedin } from "lucide-react";
+
+export interface FooterProps {
+  productName: string;
+  navLinks?: { label: string; href: string }[];
+  legalLinks?: { label: string; href: string }[];
+}
+
+export function Footer({
+  productName,
+  navLinks = [],
+  legalLinks = [],
+}: FooterProps) {
+  const socialLinks = [
+    { icon: Twitter, href: "#", label: "Twitter" },
+    { icon: Github, href: "#", label: "GitHub" },
+    { icon: Linkedin, href: "#", label: "LinkedIn" },
+  ];
+
+  return (
+    <footer className="border-t border-white/5 py-16">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+          <div className="md:col-span-2">
+            <h3 className="text-xl font-semibold mb-4">{productName}</h3>
+            <p className="text-zinc-500 text-sm mb-6 max-w-sm">
+              Build, launch, and scale your product with confidence.
+            </p>
+            <div className="flex gap-4">
+              {socialLinks.map(({ icon: Icon, href, label }) => (
+                <a
+                  key={label}
+                  href={href}
+                  aria-label={label}
+                  className="w-10 h-10 rounded-lg glass-card flex items-center justify-center text-zinc-400 hover:text-cyan-400 transition-colors"
+                >
+                  <Icon className="w-5 h-5" />
+                </a>
+              ))}
+            </div>
+          </div>
+          <div>
+            <h4 className="font-medium mb-4">Product</h4>
+            <ul className="space-y-3">
+              {navLinks.length > 0 ? (
+                navLinks.map((link) => (
+                  <li key={link.href}>
+                    <Link
+                      href={link.href}
+                      className="text-zinc-500 hover:text-zinc-300 text-sm transition-colors"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))
+              ) : (
+                <>
+                  <li>
+                    <Link
+                      href="#"
+                      className="text-zinc-500 hover:text-zinc-300 text-sm"
+                    >
+                      Features
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="#"
+                      className="text-zinc-500 hover:text-zinc-300 text-sm"
+                    >
+                      Pricing
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="#"
+                      className="text-zinc-500 hover:text-zinc-300 text-sm"
+                    >
+                      Integrations
+                    </Link>
+                  </li>
+                </>
+              )}
+            </ul>
+          </div>
+          <div>
+            <h4 className="font-medium mb-4">Legal</h4>
+            <ul className="space-y-3">
+              {legalLinks.length > 0 ? (
+                legalLinks.map((link) => (
+                  <li key={link.href}>
+                    <Link
+                      href={link.href}
+                      className="text-zinc-500 hover:text-zinc-300 text-sm transition-colors"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))
+              ) : (
+                <>
+                  <li>
+                    <Link
+                      href="#"
+                      className="text-zinc-500 hover:text-zinc-300 text-sm"
+                    >
+                      Privacy
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="#"
+                      className="text-zinc-500 hover:text-zinc-300 text-sm"
+                    >
+                      Terms
+                    </Link>
+                  </li>
+                </>
+              )}
+            </ul>
+          </div>
+        </div>
+        <div className="mt-12 pt-8 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center gap-4">
+          <p className="text-zinc-600 text-sm">
+            © {new Date().getFullYear()} {productName}. All rights reserved.
+          </p>
+          <div className="flex items-center gap-2">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              className="px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-sm placeholder:text-zinc-500 focus:outline-none focus:border-cyan-500/50 w-48"
+            />
+            <button
+              type="button"
+              className="px-4 py-2 rounded-lg bg-cyan-500/20 text-cyan-400 text-sm font-medium hover:bg-cyan-500/30 transition-colors"
+            >
+              Subscribe
+            </button>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}

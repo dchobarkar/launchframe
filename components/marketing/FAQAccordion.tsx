@@ -1,0 +1,58 @@
+"use client";
+
+import { useState } from "react";
+import { ChevronDown } from "lucide-react";
+
+export interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+export interface FAQAccordionProps {
+  headline: string;
+  items: FAQItem[];
+}
+
+export function FAQAccordion({ headline, items }: FAQAccordionProps) {
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
+
+  return (
+    <section className="py-20">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">
+            {headline}
+          </h2>
+          <div className="space-y-2">
+            {items.map((item, i) => (
+              <div key={i} className="glass-card rounded-xl overflow-hidden">
+                <button
+                  onClick={() => setOpenIndex(openIndex === i ? null : i)}
+                  className="w-full px-6 py-4 flex items-center justify-between text-left hover:bg-white/5 transition-colors"
+                >
+                  <span className="font-medium">{item.question}</span>
+                  <ChevronDown
+                    className={`w-5 h-5 text-zinc-500 transition-transform ${
+                      openIndex === i ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
+                <div
+                  className={`grid transition-all duration-300 ease-out ${
+                    openIndex === i ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+                  }`}
+                >
+                  <div className="overflow-hidden">
+                    <div className="px-6 pb-4 text-zinc-400 text-sm">
+                      {item.answer}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

@@ -1,8 +1,21 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0a0a0f;
+  --foreground: #e4e4e7;
+  --muted: #71717a;
+  --border: rgba(255, 255, 255, 0.08);
+  --card-bg: rgba(255, 255, 255, 0.03);
+  --card-border: rgba(255, 255, 255, 0.06);
+  --neon-cyan: #22d3ee;
+  --neon-green: #34d399;
+  --neon-violet: #a78bfa;
+  --neon-pink: #f472b6;
+  --gradient-start: #0f0f1a;
+  --gradient-mid: #1a1a2e;
+  --gradient-end: #16213e;
+  --glow-cyan: rgba(34, 211, 238, 0.4);
+  --glow-violet: rgba(167, 139, 250, 0.3);
 }
 
 @theme inline {
@@ -12,15 +25,61 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+/* Section fade-up animation (CSS only) */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.6s ease-out forwards;
+}
+
+.animate-fade-up-delay-1 { animation-delay: 0.1s; }
+.animate-fade-up-delay-2 { animation-delay: 0.2s; }
+.animate-fade-up-delay-3 { animation-delay: 0.3s; }
+.animate-fade-up-delay-4 { animation-delay: 0.4s; }
+
+/* Feature card hover lift */
+.feature-card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.feature-card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+}
+
+/* Glass card */
+.glass-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+}
+
+/* CTA glow effect */
+.cta-glow {
+  box-shadow: 0 0 30px var(--glow-cyan);
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+.cta-glow:hover {
+  box-shadow: 0 0 40px var(--glow-cyan), 0 0 60px var(--glow-violet);
+  transform: scale(1.02);
+}
+
+/* Pricing toggle transition */
+.pricing-toggle-transition {
+  transition: all 0.3s ease;
 }
