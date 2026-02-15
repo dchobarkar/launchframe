@@ -4,17 +4,17 @@ import { useState } from "react";
 
 const NewsletterForm = () => {
   const [email, setEmail] = useState("");
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [status, setStatus] = useState<
+    "idle" | "loading" | "success" | "error"
+  >("idle");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email.trim()) return;
 
     setStatus("loading");
-    // Simulate API call - in production would POST to your backend
     await new Promise((resolve) => setTimeout(resolve, 800));
 
-    // Basic email validation
     const isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim());
     if (isValid) {
       setStatus("success");
@@ -25,7 +25,10 @@ const NewsletterForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 w-full sm:w-auto">
+    <form
+      onSubmit={handleSubmit}
+      className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 w-full sm:w-auto"
+    >
       <input
         type="email"
         value={email}
@@ -40,7 +43,11 @@ const NewsletterForm = () => {
         disabled={status === "loading"}
         className="px-4 py-2 rounded-lg accent-bg-muted accent-text text-sm font-medium hover:accent-bg-muted-strong transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
       >
-        {status === "loading" ? "..." : status === "success" ? "Subscribed!" : "Subscribe"}
+        {status === "loading"
+          ? "..."
+          : status === "success"
+            ? "Subscribed!"
+            : "Subscribe"}
       </button>
       {status === "error" && (
         <span className="text-xs text-red-400">Please enter a valid email</span>

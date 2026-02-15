@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { X, Check, Loader2 } from "lucide-react";
+
 import { IntegrationLogo } from "@/components/ui/IntegrationLogo";
 
 interface IntegrationModalProps {

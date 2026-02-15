@@ -55,4 +55,4 @@ export const FAQAccordion = ({ headline, items }: FAQAccordionProps) => {
       </div>
     </section>
   );
-}
+};

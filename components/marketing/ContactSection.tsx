@@ -19,11 +19,17 @@ export const ContactSection = ({
     email: "",
     message: "",
   });
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [status, setStatus] = useState<
+    "idle" | "loading" | "success" | "error"
+  >("idle");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
+    if (
+      !formData.name.trim() ||
+      !formData.email.trim() ||
+      !formData.message.trim()
+    ) {
       setStatus("error");
       return;
     }
@@ -31,7 +37,9 @@ export const ContactSection = ({
     setStatus("loading");
     await new Promise((resolve) => setTimeout(resolve, 1200));
 
-    const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email.trim());
+    const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(
+      formData.email.trim(),
+    );
     if (isValidEmail) {
       setStatus("success");
       setFormData({ name: "", email: "", message: "" });
@@ -74,7 +82,10 @@ export const ContactSection = ({
               className="glass-card rounded-xl p-5 sm:p-8 space-y-5 sm:space-y-6"
             >
               <div>
-                <label htmlFor="contact-name" className="block text-sm font-medium mb-2">
+                <label
+                  htmlFor="contact-name"
+                  className="block text-sm font-medium mb-2"
+                >
                   Name
                 </label>
                 <input
@@ -91,7 +102,10 @@ export const ContactSection = ({
                 />
               </div>
               <div>
-                <label htmlFor="contact-email" className="block text-sm font-medium mb-2">
+                <label
+                  htmlFor="contact-email"
+                  className="block text-sm font-medium mb-2"
+                >
                   Email
                 </label>
                 <input
@@ -108,14 +122,20 @@ export const ContactSection = ({
                 />
               </div>
               <div>
-                <label htmlFor="contact-message" className="block text-sm font-medium mb-2">
+                <label
+                  htmlFor="contact-message"
+                  className="block text-sm font-medium mb-2"
+                >
                   Message
                 </label>
                 <textarea
                   id="contact-message"
                   value={formData.message}
                   onChange={(e) =>
-                    setFormData((prev) => ({ ...prev, message: e.target.value }))
+                    setFormData((prev) => ({
+                      ...prev,
+                      message: e.target.value,
+                    }))
                   }
                   placeholder="How can we help?"
                   rows={4}
@@ -149,4 +169,4 @@ export const ContactSection = ({
       </div>
     </section>
   );
-}
+};

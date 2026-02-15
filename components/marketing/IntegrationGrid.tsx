@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Plug, Plus } from "lucide-react";
+
 import { IntegrationLogo } from "@/components/ui/IntegrationLogo";
 import { IntegrationModal } from "@/components/ui/IntegrationModal";
 
@@ -63,4 +64,4 @@ export const IntegrationGrid = ({
       )}
     </section>
   );
-}
+};

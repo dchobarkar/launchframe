@@ -1,5 +1,13 @@
 interface ProductShowcaseMockupProps {
-  variant: "saas" | "ai" | "creator" | "agency" | "dev-tools" | "ecommerce" | "fintech" | "marketing";
+  variant:
+    | "saas"
+    | "ai"
+    | "creator"
+    | "agency"
+    | "dev-tools"
+    | "ecommerce"
+    | "fintech"
+    | "marketing";
 }
 
 const ProductShowcaseMockup = ({ variant }: ProductShowcaseMockupProps) => {

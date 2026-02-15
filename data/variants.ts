@@ -39,7 +39,6 @@ export interface VariantConfig {
   data: LandingPageData;
   navConfig: NavConfig;
   metadata: PageMetadata;
-  /** ProductShowcase section id (default: "demo") */
   productShowcaseId?: string;
 }
 
@@ -90,7 +89,6 @@ export const getVariantData = (slug: string): LandingPageData | null =>
 export const getNavConfig = (slug: string): NavConfig | null =>
   getVariantConfig(slug)?.navConfig ?? null;
 
-/** All sitemap routes derived from variant config */
 export const getSitemapRoutes = (): string[] => {
   const routes: string[] = [""];
   for (const slug of VARIANT_SLUGS) {

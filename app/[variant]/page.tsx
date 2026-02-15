@@ -1,3 +1,5 @@
+import { notFound } from "next/navigation";
+
 import { HeroBlock } from "@/components/marketing/HeroBlock";
 import { LogoCloud } from "@/components/marketing/LogoCloud";
 import { FeatureCard } from "@/components/marketing/FeatureCard";
@@ -13,11 +15,10 @@ import VariantMockup from "@/components/ui/VariantMockup";
 import ProductShowcaseMockup from "@/components/ui/ProductShowcaseMockup";
 import { getVariantConfig } from "@/data/variants";
 import { getFeatureIcon } from "@/data/icons";
-import { notFound } from "next/navigation";
 
 type Props = { params: Promise<{ variant: string }> };
 
-const VariantPage = async ({ params }: Props) => {
+const Page = async ({ params }: Props) => {
   const { variant } = await params;
   const config = getVariantConfig(variant);
   if (!config) notFound();
@@ -122,4 +123,4 @@ const VariantPage = async ({ params }: Props) => {
   );
 };
 
-export default VariantPage;
+export default Page;

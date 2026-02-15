@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+
 import { LegalPage } from "@/components/legal/LegalPage";
 import { termsContent } from "@/data/legal";
 import { getLegalMetadata } from "@/data/metadata";
@@ -13,7 +14,7 @@ export const generateMetadata = async ({ params }: Props) => {
   return getLegalMetadata(
     config.navConfig.productName,
     "terms",
-    `/${variant}/terms`
+    `/${variant}/terms`,
   );
 };
 
@@ -21,7 +22,7 @@ export const generateStaticParams = () => {
   return VARIANT_SLUGS.map((variant) => ({ variant }));
 };
 
-const TermsPage = async ({ params }: Props) => {
+const Page = async ({ params }: Props) => {
   const { variant } = await params;
   const config = getVariantConfig(variant);
   if (!config) notFound();
@@ -37,4 +38,4 @@ const TermsPage = async ({ params }: Props) => {
   );
 };
 
-export default TermsPage;
+export default Page;

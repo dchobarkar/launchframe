@@ -1,9 +1,10 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+
 import { variantLinks, homeContent } from "@/data/home";
 import { getVariantIcon } from "@/data/icons";
 
-export default function HomePage() {
+export default function Page() {
   return (
     <main className="min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 py-12 sm:py-16 md:py-24">
       <div

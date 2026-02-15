@@ -15,7 +15,8 @@ export const fintechData: LandingPageData = {
       "Mercury",
       "Ramp",
     ],
-    announcementBanner: "New: Instant bank verification — reduce drop-off by 25%",
+    announcementBanner:
+      "New: Instant bank verification — reduce drop-off by 25%",
     mockupVariant: "fintech",
   },
   logoCloud: {
@@ -93,8 +94,7 @@ export const fintechData: LandingPageData = {
   },
   integrations: {
     headline: "Connects with your ecosystem",
-    subtext:
-      "Banks, processors, and data providers.",
+    subtext: "Banks, processors, and data providers.",
     items: [
       { name: "Stripe" },
       { name: "Plaid" },
@@ -163,19 +163,22 @@ export const fintechData: LandingPageData = {
     subtext: "From startups to unicorns.",
     items: [
       {
-        quote: "We went from idea to live in 3 months. The compliance piece alone would have taken a year.",
+        quote:
+          "We went from idea to live in 3 months. The compliance piece alone would have taken a year.",
         author: "Rachel Kim",
         role: "CEO",
         company: "PayFlow",
       },
       {
-        quote: "Bank-grade security without the bank-grade timeline. Game changer.",
+        quote:
+          "Bank-grade security without the bank-grade timeline. Game changer.",
         author: "Michael Torres",
         role: "CTO",
         company: "FinanceOS",
       },
       {
-        quote: "Their support team knows fintech inside out. Saved us countless compliance headaches.",
+        quote:
+          "Their support team knows fintech inside out. Saved us countless compliance headaches.",
         author: "Lisa Chen",
         role: "Compliance Lead",
         company: "MoneyHub",
@@ -184,8 +187,7 @@ export const fintechData: LandingPageData = {
   },
   contact: {
     headline: "Get in touch",
-    subtext:
-      "Questions about compliance or integration? Our team is here.",
+    subtext: "Questions about compliance or integration? Our team is here.",
   },
   faq: {
     headline: "Frequently asked questions",

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+
 import { PricingCard } from "./PricingCard";
 import { PricingToggle } from "./PricingToggle";
 import PlanActivationModal from "@/components/ui/PlanActivationModal";
@@ -68,4 +69,4 @@ export const PricingSection = ({
       )}
     </section>
   );
-}
+};

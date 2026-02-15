@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+
 import { SITE_URL } from "@/data/metadata";
 import { getSitemapRoutes } from "@/data/variants";
 

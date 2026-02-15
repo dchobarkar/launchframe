@@ -31,8 +31,7 @@ export const ecommerceData: LandingPageData = {
   },
   features: {
     headline: "Everything to run your store",
-    subtext:
-      "From first sale to repeat customer. We've got you covered.",
+    subtext: "From first sale to repeat customer. We've got you covered.",
     items: [
       {
         iconKey: "Layout",
@@ -75,8 +74,7 @@ export const ecommerceData: LandingPageData = {
   },
   productShowcase: {
     headline: "Your store, your way",
-    subtext:
-      "Customize everything. Or use a template and go live today.",
+    subtext: "Customize everything. Or use a template and go live today.",
     mockupVariant: "ecommerce",
     features: [
       {
@@ -93,8 +91,7 @@ export const ecommerceData: LandingPageData = {
   },
   integrations: {
     headline: "Connects with your tools",
-    subtext:
-      "Payments, email, shipping, and more.",
+    subtext: "Payments, email, shipping, and more.",
     items: [
       { name: "Stripe" },
       { name: "Shopify" },
@@ -168,19 +165,22 @@ export const ecommerceData: LandingPageData = {
     subtext: "From first sale to seven figures.",
     items: [
       {
-        quote: "We 3x'd our revenue in 6 months. The checkout alone was a game-changer.",
+        quote:
+          "We 3x'd our revenue in 6 months. The checkout alone was a game-changer.",
         author: "Emma Wilson",
         role: "Founder",
         company: "Bloom Co",
       },
       {
-        quote: "Finally, a platform that doesn't nickel-and-dime you. Transparent and powerful.",
+        quote:
+          "Finally, a platform that doesn't nickel-and-dime you. Transparent and powerful.",
         author: "James Park",
         role: "E-commerce Director",
         company: "Urban Goods",
       },
       {
-        quote: "Migration was painless. We were live in a weekend. Support was incredible.",
+        quote:
+          "Migration was painless. We were live in a weekend. Support was incredible.",
         author: "Sofia Martinez",
         role: "Operations Lead",
         company: "Craft & Co",
@@ -189,8 +189,7 @@ export const ecommerceData: LandingPageData = {
   },
   contact: {
     headline: "Get in touch",
-    subtext:
-      "Questions about selling online? We're here to help.",
+    subtext: "Questions about selling online? We're here to help.",
   },
   faq: {
     headline: "Frequently asked questions",

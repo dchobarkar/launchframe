@@ -47,9 +47,7 @@ export const SocialIconButton = ({
       {state === "loading" && (
         <Loader2 className="w-5 h-5 accent-text animate-spin" />
       )}
-      {state === "success" && (
-        <Check className="w-5 h-5 accent-text" />
-      )}
+      {state === "success" && <Check className="w-5 h-5 accent-text" />}
     </a>
   );
 };

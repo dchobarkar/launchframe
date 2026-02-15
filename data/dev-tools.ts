@@ -8,13 +8,7 @@ export const devToolsData: LandingPageData = {
       "Build faster with our developer-first platform. REST, GraphQL, and real-time. Deploy in minutes, not days.",
     primaryCta: { label: "Get API key", href: "#pricing" },
     secondaryCta: { label: "Read docs", href: "#features" },
-    trustBadges: [
-      "10M+ API calls/day",
-      "GitHub",
-      "Vercel",
-      "Stripe",
-      "Linear",
-    ],
+    trustBadges: ["10M+ API calls/day", "GitHub", "Vercel", "Stripe", "Linear"],
     announcementBanner: "New: Webhooks v2 with retry logic — now GA",
     mockupVariant: "dev-tools",
   },
@@ -31,8 +25,7 @@ export const devToolsData: LandingPageData = {
   },
   features: {
     headline: "Developer experience first",
-    subtext:
-      "Everything you need to integrate, ship, and scale.",
+    subtext: "Everything you need to integrate, ship, and scale.",
     items: [
       {
         iconKey: "GitBranch",
@@ -62,8 +55,7 @@ export const devToolsData: LandingPageData = {
       {
         iconKey: "Lock",
         title: "API keys & OAuth",
-        description:
-          "Scoped keys, team management, and full audit logs.",
+        description: "Scoped keys, team management, and full audit logs.",
       },
       {
         iconKey: "BarChart3",
@@ -75,8 +67,7 @@ export const devToolsData: LandingPageData = {
   },
   productShowcase: {
     headline: "Integrate in minutes",
-    subtext:
-      "Copy, paste, ship. Our SDKs handle the complexity.",
+    subtext: "Copy, paste, ship. Our SDKs handle the complexity.",
     mockupVariant: "dev-tools",
     features: [
       {
@@ -93,8 +84,7 @@ export const devToolsData: LandingPageData = {
   },
   integrations: {
     headline: "Works with your stack",
-    subtext:
-      "SDKs, plugins, and native integrations.",
+    subtext: "SDKs, plugins, and native integrations.",
     items: [
       { name: "GitHub" },
       { name: "Vercel" },
@@ -170,13 +160,15 @@ export const devToolsData: LandingPageData = {
         company: "TechCorp",
       },
       {
-        quote: "The TypeScript SDK is a game-changer. Full type safety out of the box.",
+        quote:
+          "The TypeScript SDK is a game-changer. Full type safety out of the box.",
         author: "Sam Rivera",
         role: "Founder",
         company: "DevFlow",
       },
       {
-        quote: "Webhooks that actually work. Retries, idempotency — they thought of everything.",
+        quote:
+          "Webhooks that actually work. Retries, idempotency — they thought of everything.",
         author: "Jordan Lee",
         role: "CTO",
         company: "DataStack",
@@ -185,8 +177,7 @@ export const devToolsData: LandingPageData = {
   },
   contact: {
     headline: "Get in touch",
-    subtext:
-      "Questions about the API? Our devrel team is here to help.",
+    subtext: "Questions about the API? Our devrel team is here to help.",
   },
   faq: {
     headline: "Frequently asked questions",

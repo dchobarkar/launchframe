@@ -1,4 +1,5 @@
 import Link from "next/link";
+
 import NewsletterForm from "@/components/ui/NewsletterForm";
 import { SocialIconButton } from "@/components/ui/SocialIconButton";
 
@@ -54,57 +55,53 @@ export const Footer = ({
           <div>
             <h4 className="font-medium mb-4">Product</h4>
             <ul className="space-y-3">
-              {(navLinks?.length ?? 0) > 0 ? (
-                navLinks!.map((link) => (
-                  <li key={link.href}>
-                    <Link
-                      href={link.href}
-                      className="text-zinc-500 hover:text-zinc-300 text-sm transition-colors"
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))
-              ) : (
-                defaultNavLinks.map((link) => (
-                  <li key={link.href}>
-                    <Link
-                      href={link.href}
-                      className="text-zinc-500 hover:text-zinc-300 text-sm"
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))
-              )}
+              {(navLinks?.length ?? 0) > 0
+                ? navLinks!.map((link) => (
+                    <li key={link.href}>
+                      <Link
+                        href={link.href}
+                        className="text-zinc-500 hover:text-zinc-300 text-sm transition-colors"
+                      >
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))
+                : defaultNavLinks.map((link) => (
+                    <li key={link.href}>
+                      <Link
+                        href={link.href}
+                        className="text-zinc-500 hover:text-zinc-300 text-sm"
+                      >
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))}
             </ul>
           </div>
           <div>
             <h4 className="font-medium mb-4">Legal</h4>
             <ul className="space-y-3">
-              {(legalLinks?.length ?? 0) > 0 ? (
-                legalLinks!.map((link) => (
-                  <li key={link.href}>
-                    <Link
-                      href={link.href}
-                      className="text-zinc-500 hover:text-zinc-300 text-sm transition-colors"
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))
-              ) : (
-                defaultLegalLinks.map((link) => (
-                  <li key={link.href}>
-                    <Link
-                      href={link.href}
-                      className="text-zinc-500 hover:text-zinc-300 text-sm"
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))
-              )}
+              {(legalLinks?.length ?? 0) > 0
+                ? legalLinks!.map((link) => (
+                    <li key={link.href}>
+                      <Link
+                        href={link.href}
+                        className="text-zinc-500 hover:text-zinc-300 text-sm transition-colors"
+                      >
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))
+                : defaultLegalLinks.map((link) => (
+                    <li key={link.href}>
+                      <Link
+                        href={link.href}
+                        className="text-zinc-500 hover:text-zinc-300 text-sm"
+                      >
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))}
             </ul>
           </div>
         </div>
@@ -117,4 +114,4 @@ export const Footer = ({
       </div>
     </footer>
   );
-}
+};

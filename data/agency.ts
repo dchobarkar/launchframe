@@ -8,13 +8,7 @@ export const agencyData: LandingPageData = {
       "Strategy, design, and development for ambitious companies. From concept to launch, we help you stand out.",
     primaryCta: { label: "Start a project", href: "#pricing" },
     secondaryCta: { label: "View our work", href: "#features" },
-    trustBadges: [
-      "50+ brands launched",
-      "Nike",
-      "Airbnb",
-      "Spotify",
-      "Stripe",
-    ],
+    trustBadges: ["50+ brands launched", "Nike", "Airbnb", "Spotify", "Stripe"],
     announcementBanner: "Now accepting Q2 2025 projects — limited slots",
     mockupVariant: "agency",
   },
@@ -31,8 +25,7 @@ export const agencyData: LandingPageData = {
   },
   features: {
     headline: "How we work",
-    subtext:
-      "A proven process that turns ideas into brands people love.",
+    subtext: "A proven process that turns ideas into brands people love.",
     items: [
       {
         iconKey: "MessageSquare",
@@ -93,8 +86,7 @@ export const agencyData: LandingPageData = {
   },
   integrations: {
     headline: "Tools we use",
-    subtext:
-      "We work with the best platforms to deliver results.",
+    subtext: "We work with the best platforms to deliver results.",
     items: [
       { name: "Figma" },
       { name: "Vercel" },
@@ -158,19 +150,22 @@ export const agencyData: LandingPageData = {
     subtext: "From startups to enterprises.",
     items: [
       {
-        quote: "They understood our vision from day one. The rebrand exceeded expectations.",
+        quote:
+          "They understood our vision from day one. The rebrand exceeded expectations.",
         author: "Jessica Park",
         role: "CEO",
         company: "Lumina",
       },
       {
-        quote: "Best agency we've worked with. Fast, creative, and genuinely collaborative.",
+        quote:
+          "Best agency we've worked with. Fast, creative, and genuinely collaborative.",
         author: "David Kim",
         role: "Founder",
         company: "FlowTech",
       },
       {
-        quote: "Our conversion rate jumped 40% after the redesign. Worth every penny.",
+        quote:
+          "Our conversion rate jumped 40% after the redesign. Worth every penny.",
         author: "Maria Santos",
         role: "Head of Growth",
         company: "ScaleUp",
@@ -179,8 +174,7 @@ export const agencyData: LandingPageData = {
   },
   contact: {
     headline: "Let's talk",
-    subtext:
-      "Tell us about your project. We respond within 24 hours.",
+    subtext: "Tell us about your project. We respond within 24 hours.",
   },
   faq: {
     headline: "Frequently asked questions",

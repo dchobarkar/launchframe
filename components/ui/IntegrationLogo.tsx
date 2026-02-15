@@ -26,6 +26,7 @@ import {
   SiAtlassian,
   SiDropbox,
 } from "@icons-pack/react-simple-icons";
+
 import { LOGO_ICON_MAP } from "@/data/logoMap";
 
 const ICON_COMPONENTS: Record<
@@ -61,9 +62,16 @@ export interface IntegrationLogoProps {
   size?: "sm" | "md" | "lg";
 }
 
-const sizeMap = { sm: { container: "w-12 h-12", icon: 24 }, md: { container: "w-14 h-14", icon: 28 }, lg: { container: "w-16 h-16", icon: 36 } };
+const sizeMap = {
+  sm: { container: "w-12 h-12", icon: 24 },
+  md: { container: "w-14 h-14", icon: 28 },
+  lg: { container: "w-16 h-16", icon: 36 },
+};
 
-export const IntegrationLogo = ({ name, size = "sm" }: IntegrationLogoProps) => {
+export const IntegrationLogo = ({
+  name,
+  size = "sm",
+}: IntegrationLogoProps) => {
   const key = LOGO_ICON_MAP[name];
   const isDomain = key?.includes(".");
   const IconComponent = key && !isDomain ? ICON_COMPONENTS[key] : null;
@@ -74,7 +82,9 @@ export const IntegrationLogo = ({ name, size = "sm" }: IntegrationLogoProps) => 
 
   if (isDomain && !imgError) {
     return (
-      <div className={`${container} ${rounded} bg-white/95 flex items-center justify-center ${padding} shadow-sm shrink-0`}>
+      <div
+        className={`${container} ${rounded} bg-white/95 flex items-center justify-center ${padding} shadow-sm shrink-0`}
+      >
         <Image
           src={`https://logo.clearbit.com/${key}`}
           alt={name}
@@ -88,14 +98,20 @@ export const IntegrationLogo = ({ name, size = "sm" }: IntegrationLogoProps) => 
   }
   if (IconComponent) {
     return (
-      <div className={`${container} ${rounded} bg-white/95 flex items-center justify-center ${padding} shadow-sm shrink-0`}>
+      <div
+        className={`${container} ${rounded} bg-white/95 flex items-center justify-center ${padding} shadow-sm shrink-0`}
+      >
         <IconComponent size={icon} color="default" />
       </div>
     );
   }
   return (
-    <div className={`${container} ${rounded} bg-white/95 flex items-center justify-center shadow-sm shrink-0`}>
-      <span className={`font-bold text-zinc-600 ${size === "lg" ? "text-xl" : size === "md" ? "text-lg" : "text-lg"}`}>
+    <div
+      className={`${container} ${rounded} bg-white/95 flex items-center justify-center shadow-sm shrink-0`}
+    >
+      <span
+        className={`font-bold text-zinc-600 ${size === "lg" ? "text-xl" : size === "md" ? "text-lg" : "text-lg"}`}
+      >
         {name.charAt(0)}
       </span>
     </div>

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
-/** Base URL for the site. Update for production. */
-export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://launchframe.dev";
+export const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://launchframe-plum.vercel.app";
 
 export interface PageMetadata {
   title: string;
@@ -19,7 +19,6 @@ export interface PageMetadata {
   };
 }
 
-/** Root / home page metadata */
 export const rootMetadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
@@ -69,13 +68,18 @@ export const rootMetadata: Metadata = {
   },
 };
 
-/** Variant metadata keyed by route path */
 export const variantMetadata: Record<string, PageMetadata> = {
   saas: {
     title: "MetricFlow — Analytics Platform for Modern Teams",
     description:
       "Real-time analytics, AI-powered insights, and beautiful dashboards. Built for developers and product teams who need to move fast.",
-    keywords: ["analytics", "SaaS", "dashboards", "product analytics", "real-time"],
+    keywords: [
+      "analytics",
+      "SaaS",
+      "dashboards",
+      "product analytics",
+      "real-time",
+    ],
     openGraph: {
       title: "MetricFlow — Analytics Platform for Modern Teams",
       description:
@@ -205,29 +209,24 @@ export const variantMetadata: Record<string, PageMetadata> = {
   },
 };
 
-/** Converts PageMetadata to Next.js Metadata with canonical URL */
-export const toMetadata = (
-  meta: PageMetadata,
-  path: string
-): Metadata => ({
-    title: meta.title,
-    description: meta.description,
-    keywords: meta.keywords,
-    openGraph: {
-      ...meta.openGraph,
-      url: path,
-    },
-    twitter: meta.twitter,
-    alternates: {
-      canonical: path,
-    },
-  });
+export const toMetadata = (meta: PageMetadata, path: string): Metadata => ({
+  title: meta.title,
+  description: meta.description,
+  keywords: meta.keywords,
+  openGraph: {
+    ...meta.openGraph,
+    url: path,
+  },
+  twitter: meta.twitter,
+  alternates: {
+    canonical: path,
+  },
+});
 
-/** Legal page metadata (privacy, terms) */
 export const getLegalMetadata = (
   productName: string,
   pageType: "privacy" | "terms",
-  path: string
+  path: string,
 ): Metadata => {
   const title =
     pageType === "privacy"

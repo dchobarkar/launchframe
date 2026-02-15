@@ -1,8 +1,17 @@
-import ProductMockup from "./ProductMockup";
 import { Bot } from "lucide-react";
 
+import ProductMockup from "./ProductMockup";
+
 interface VariantMockupProps {
-  variant: "saas" | "ai" | "creator" | "agency" | "dev-tools" | "ecommerce" | "fintech" | "marketing";
+  variant:
+    | "saas"
+    | "ai"
+    | "creator"
+    | "agency"
+    | "dev-tools"
+    | "ecommerce"
+    | "fintech"
+    | "marketing";
 }
 
 const VariantMockup = ({ variant }: VariantMockupProps) => {

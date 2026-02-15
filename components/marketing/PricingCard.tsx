@@ -1,5 +1,3 @@
-"use client";
-
 import { Check } from "lucide-react";
 
 export interface PricingCardProps {
@@ -85,4 +83,4 @@ export const PricingCard = ({
       </button>
     </div>
   );
-}
+};

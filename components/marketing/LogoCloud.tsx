@@ -1,7 +1,7 @@
 "use client";
 
-import Image from "next/image";
 import { useState } from "react";
+import Image from "next/image";
 import {
   SiStripe,
   SiVercel,
@@ -21,6 +21,7 @@ import {
   SiShopify,
   SiSpotify,
 } from "@icons-pack/react-simple-icons";
+
 import { LOGO_ICON_MAP } from "@/data/logoMap";
 
 export interface LogoCloudProps {
@@ -56,7 +57,6 @@ const LogoItem = ({ name }: { name: string }) => {
   const isDomain = key?.includes(".");
   const [imgError, setImgError] = useState(false);
 
-  /* Light background ensures dark logos (GitHub, Medium) are visible on dark theme */
   const logoContainerClass =
     "flex items-center justify-center w-14 h-14 flex-shrink-0 rounded-xl bg-white/95 shadow-sm";
 
@@ -89,32 +89,32 @@ const LogoItem = ({ name }: { name: string }) => {
       {name.charAt(0)}
     </div>
   );
-}
+};
 
 export const LogoCloud = ({ headline, logos }: LogoCloudProps) => (
-    <section className="py-16 md:py-20 relative overflow-hidden">
-      <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
+  <section className="py-16 md:py-20 relative overflow-hidden">
+    <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <p className="text-center text-zinc-500 text-sm font-medium tracking-wider uppercase mb-8 md:mb-12">
-          {headline}
-        </p>
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <p className="text-center text-zinc-500 text-sm font-medium tracking-wider uppercase mb-8 md:mb-12">
+        {headline}
+      </p>
 
-        <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-6 md:gap-8">
-          {logos.map((logo, i) => (
-            <div
-              key={i}
-              className="flex items-center gap-3 sm:gap-4 px-4 py-3 sm:px-5 sm:py-3.5 rounded-xl glass-card hover:border-white/15 transition-all min-w-0 sm:min-w-42.5"
-            >
-              <LogoItem name={logo.name} />
-              <span className="text-zinc-300 font-medium text-sm">
-                {logo.name}
-              </span>
-            </div>
-          ))}
-        </div>
-
-        <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
+      <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-6 md:gap-8">
+        {logos.map((logo, i) => (
+          <div
+            key={i}
+            className="flex items-center gap-3 sm:gap-4 px-4 py-3 sm:px-5 sm:py-3.5 rounded-xl glass-card hover:border-white/15 transition-all min-w-0 sm:min-w-42.5"
+          >
+            <LogoItem name={logo.name} />
+            <span className="text-zinc-300 font-medium text-sm">
+              {logo.name}
+            </span>
+          </div>
+        ))}
       </div>
-    </section>
+
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
+    </div>
+  </section>
 );

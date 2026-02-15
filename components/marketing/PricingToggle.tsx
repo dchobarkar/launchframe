@@ -50,4 +50,4 @@ export const PricingToggle = ({ onToggle }: PricingToggleProps) => {
       )}
     </div>
   );
-}
+};
