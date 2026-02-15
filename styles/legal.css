@@ -1,5 +1,3 @@
-/* Legal page styles — section separators for policy/terms content */
-
 .legal-content section + section {
   padding-top: 1.5rem;
   border-top: 1px solid var(--border);

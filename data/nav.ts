@@ -1,5 +1,6 @@
 import type { CtaLink } from "./types";
 
+/** Nav and footer link configuration per variant. */
 export interface NavConfig {
   productName: string;
   links: CtaLink[];

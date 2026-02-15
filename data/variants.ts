@@ -1,0 +1,106 @@
+/**
+ * Central variant configuration. Maps slugs to data, nav, and metadata.
+ * Add new variants by extending VARIANT_SLUGS and the maps below.
+ */
+import type { LandingPageData } from "./types";
+import type { NavConfig } from "./nav";
+import type { PageMetadata } from "./metadata";
+import { saasData } from "./saas";
+import { aiStartupData } from "./ai-startup";
+import { creatorToolData } from "./creator-tool";
+import { agencyData } from "./agency";
+import { devToolsData } from "./dev-tools";
+import { ecommerceData } from "./ecommerce";
+import { fintechData } from "./fintech";
+import { marketingData } from "./marketing";
+import {
+  saasNavConfig,
+  aiStartupNavConfig,
+  creatorToolNavConfig,
+  agencyNavConfig,
+  devToolsNavConfig,
+  ecommerceNavConfig,
+  fintechNavConfig,
+  marketingNavConfig,
+} from "./nav";
+import { variantMetadata } from "./metadata";
+
+/** All supported variant slugs. Used for routing and static generation. */
+export const VARIANT_SLUGS = [
+  "saas",
+  "ai-startup",
+  "creator-tool",
+  "agency",
+  "dev-tools",
+  "ecommerce",
+  "fintech",
+  "marketing",
+] as const;
+
+export type VariantSlug = (typeof VARIANT_SLUGS)[number];
+
+export interface VariantConfig {
+  slug: VariantSlug;
+  data: LandingPageData;
+  navConfig: NavConfig;
+  metadata: PageMetadata;
+  productShowcaseId?: string;
+}
+
+/** Variants with custom product showcase section IDs (for anchor links). */
+const productShowcaseIdMap: Partial<Record<VariantSlug, string>> = {
+  "creator-tool": "templates",
+  agency: "work",
+};
+
+const variantDataMap: Record<VariantSlug, LandingPageData> = {
+  saas: saasData,
+  "ai-startup": aiStartupData,
+  "creator-tool": creatorToolData,
+  agency: agencyData,
+  "dev-tools": devToolsData,
+  ecommerce: ecommerceData,
+  fintech: fintechData,
+  marketing: marketingData,
+};
+
+const variantNavMap: Record<VariantSlug, NavConfig> = {
+  saas: saasNavConfig,
+  "ai-startup": aiStartupNavConfig,
+  "creator-tool": creatorToolNavConfig,
+  agency: agencyNavConfig,
+  "dev-tools": devToolsNavConfig,
+  ecommerce: ecommerceNavConfig,
+  fintech: fintechNavConfig,
+  marketing: marketingNavConfig,
+};
+
+/** Returns full config for a variant slug, or null if invalid. */
+export const getVariantConfig = (slug: string): VariantConfig | null => {
+  if (!VARIANT_SLUGS.includes(slug as VariantSlug)) return null;
+  const key = slug as VariantSlug;
+  const metadata = variantMetadata[key];
+  if (!metadata) return null;
+  return {
+    slug: key,
+    data: variantDataMap[key],
+    navConfig: variantNavMap[key],
+    metadata,
+    productShowcaseId: productShowcaseIdMap[key] ?? "demo",
+  };
+};
+
+export const getVariantData = (slug: string): LandingPageData | null =>
+  getVariantConfig(slug)?.data ?? null;
+
+export const getNavConfig = (slug: string): NavConfig | null =>
+  getVariantConfig(slug)?.navConfig ?? null;
+
+/** Returns all routes for sitemap generation. */
+export const getSitemapRoutes = (): string[] => {
+  const routes: string[] = [""];
+  for (const slug of VARIANT_SLUGS) {
+    routes.push(`/${slug}`, `/${slug}/privacy`, `/${slug}/terms`);
+  }
+  return routes;
+};

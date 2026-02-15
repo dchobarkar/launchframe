@@ -1,7 +1,6 @@
-"use client";
-
 import { Check } from "lucide-react";
 
+/** Single pricing plan card. Supports monthly/yearly display and optional onCtaClick. */
 export interface PricingCardProps {
   name: string;
   price: string;
@@ -18,7 +17,7 @@ export interface PricingCardProps {
   onCtaClick?: (planName: string, ctaLabel: string) => void;
 }
 
-export function PricingCard({
+const PricingCard = ({
   name,
   price,
   period,
@@ -31,7 +30,7 @@ export function PricingCard({
   highlighted = false,
   billingPeriod = "monthly",
   onCtaClick,
-}: PricingCardProps) {
+}: PricingCardProps) => {
   const displayPrice =
     billingPeriod === "yearly" && priceYearly ? priceYearly : price;
   const displayPeriod =
@@ -85,4 +84,6 @@ export function PricingCard({
       </button>
     </div>
   );
-}
+};
+
+export default PricingCard;

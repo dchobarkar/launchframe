@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+
+/** Social link with demo loading/success animation on click. */
 import { Loader2, Check, Github, Twitter, Linkedin } from "lucide-react";
 
 const ICON_MAP = {
@@ -17,11 +19,11 @@ export interface SocialIconButtonProps {
   href?: string;
 }
 
-export function SocialIconButton({
+const SocialIconButton = ({
   iconKey,
   label,
   href = "#",
-}: SocialIconButtonProps) {
+}: SocialIconButtonProps) => {
   const Icon = ICON_MAP[iconKey];
   const [state, setState] = useState<"idle" | "loading" | "success">("idle");
 
@@ -47,9 +49,9 @@ export function SocialIconButton({
       {state === "loading" && (
         <Loader2 className="w-5 h-5 accent-text animate-spin" />
       )}
-      {state === "success" && (
-        <Check className="w-5 h-5 accent-text" />
-      )}
+      {state === "success" && <Check className="w-5 h-5 accent-text" />}
     </a>
   );
-}
+};
+
+export default SocialIconButton;

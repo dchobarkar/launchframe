@@ -1,3 +1,4 @@
+/** Icon maps for features and variants. Keys match iconKey in data. */
 import {
   BarChart3,
   Zap,
@@ -48,10 +49,10 @@ export const VARIANT_ICONS: Record<string, LucideIcon> = {
   ArrowRight,
 };
 
-export function getFeatureIcon(key: string): LucideIcon {
-  return FEATURE_ICONS[key] ?? Zap;
-}
+/** Returns Lucide icon for feature iconKey. Falls back to Zap. */
+export const getFeatureIcon = (key: string): LucideIcon =>
+  FEATURE_ICONS[key] ?? Zap;
 
-export function getVariantIcon(key: string): LucideIcon {
-  return VARIANT_ICONS[key] ?? BarChart3;
-}
+/** Returns Lucide icon for variant iconKey. Falls back to BarChart3. */
+export const getVariantIcon = (key: string): LucideIcon =>
+  VARIANT_ICONS[key] ?? BarChart3;

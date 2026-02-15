@@ -75,8 +75,7 @@ export const marketingData: LandingPageData = {
   },
   productShowcase: {
     headline: "Your growth command center",
-    subtext:
-      "All your channels. All your data. One place to optimize.",
+    subtext: "All your channels. All your data. One place to optimize.",
     mockupVariant: "marketing",
     features: [
       {
@@ -93,8 +92,7 @@ export const marketingData: LandingPageData = {
   },
   integrations: {
     headline: "Connects with your stack",
-    subtext:
-      "E-commerce, CRM, ads, and data warehouses.",
+    subtext: "E-commerce, CRM, ads, and data warehouses.",
     items: [
       { name: "Stripe" },
       { name: "Shopify" },
@@ -168,19 +166,22 @@ export const marketingData: LandingPageData = {
     subtext: "From startups to enterprises.",
     items: [
       {
-        quote: "We 2x'd our email revenue in 90 days. The automation alone paid for itself.",
+        quote:
+          "We 2x'd our email revenue in 90 days. The automation alone paid for itself.",
         author: "Chris Moore",
         role: "Head of Growth",
         company: "ScaleUp",
       },
       {
-        quote: "Finally, one tool for email, ads, and analytics. No more spreadsheet hell.",
+        quote:
+          "Finally, one tool for email, ads, and analytics. No more spreadsheet hell.",
         author: "Jennifer Lee",
         role: "Marketing Director",
         company: "GrowthLab",
       },
       {
-        quote: "The AI subject lines are legit. Our open rates have never been higher.",
+        quote:
+          "The AI subject lines are legit. Our open rates have never been higher.",
         author: "David Park",
         role: "Founder",
         company: "LaunchPad",
@@ -189,8 +190,7 @@ export const marketingData: LandingPageData = {
   },
   contact: {
     headline: "Get in touch",
-    subtext:
-      "Questions about growing your audience? We're here to help.",
+    subtext: "Questions about growing your audience? We're here to help.",
   },
   faq: {
     headline: "Frequently asked questions",

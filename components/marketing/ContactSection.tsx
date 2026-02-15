@@ -1,5 +1,9 @@
 "use client";
 
+/**
+ * Contact form section. Demo: validates email and shows success state.
+ * Wire to your backend or form service in production.
+ */
 import { useState } from "react";
 import { Loader2, Check } from "lucide-react";
 
@@ -9,21 +13,27 @@ export interface ContactSectionProps {
   id?: string;
 }
 
-export function ContactSection({
+const ContactSection = ({
   headline,
   subtext,
   id = "contact",
-}: ContactSectionProps) {
+}: ContactSectionProps) => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   });
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [status, setStatus] = useState<
+    "idle" | "loading" | "success" | "error"
+  >("idle");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
+    if (
+      !formData.name.trim() ||
+      !formData.email.trim() ||
+      !formData.message.trim()
+    ) {
       setStatus("error");
       return;
     }
@@ -31,7 +41,9 @@ export function ContactSection({
     setStatus("loading");
     await new Promise((resolve) => setTimeout(resolve, 1200));
 
-    const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email.trim());
+    const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(
+      formData.email.trim(),
+    );
     if (isValidEmail) {
       setStatus("success");
       setFormData({ name: "", email: "", message: "" });
@@ -74,7 +86,10 @@ export function ContactSection({
               className="glass-card rounded-xl p-5 sm:p-8 space-y-5 sm:space-y-6"
             >
               <div>
-                <label htmlFor="contact-name" className="block text-sm font-medium mb-2">
+                <label
+                  htmlFor="contact-name"
+                  className="block text-sm font-medium mb-2"
+                >
                   Name
                 </label>
                 <input
@@ -91,7 +106,10 @@ export function ContactSection({
                 />
               </div>
               <div>
-                <label htmlFor="contact-email" className="block text-sm font-medium mb-2">
+                <label
+                  htmlFor="contact-email"
+                  className="block text-sm font-medium mb-2"
+                >
                   Email
                 </label>
                 <input
@@ -108,14 +126,20 @@ export function ContactSection({
                 />
               </div>
               <div>
-                <label htmlFor="contact-message" className="block text-sm font-medium mb-2">
+                <label
+                  htmlFor="contact-message"
+                  className="block text-sm font-medium mb-2"
+                >
                   Message
                 </label>
                 <textarea
                   id="contact-message"
                   value={formData.message}
                   onChange={(e) =>
-                    setFormData((prev) => ({ ...prev, message: e.target.value }))
+                    setFormData((prev) => ({
+                      ...prev,
+                      message: e.target.value,
+                    }))
                   }
                   placeholder="How can we help?"
                   rows={4}
@@ -149,4 +173,6 @@ export function ContactSection({
       </div>
     </section>
   );
-}
+};
+
+export default ContactSection;

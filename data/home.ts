@@ -1,5 +1,6 @@
 import type { VariantLink } from "./types";
 
+/** Links shown on home page for each variant demo. */
 export const variantLinks: VariantLink[] = [
   {
     slug: "saas",

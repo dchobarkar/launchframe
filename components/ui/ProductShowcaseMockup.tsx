@@ -1,8 +1,17 @@
+/** Static mockup content for ProductShowcase, varies by variant. */
 interface ProductShowcaseMockupProps {
-  variant: "saas" | "ai" | "creator" | "agency" | "dev-tools" | "ecommerce" | "fintech" | "marketing";
+  variant:
+    | "saas"
+    | "ai"
+    | "creator"
+    | "agency"
+    | "dev-tools"
+    | "ecommerce"
+    | "fintech"
+    | "marketing";
 }
 
-export function ProductShowcaseMockup({ variant }: ProductShowcaseMockupProps) {
+const ProductShowcaseMockup = ({ variant }: ProductShowcaseMockupProps) => {
   if (variant === "saas") {
     return (
       <div className="p-6 space-y-4">
@@ -112,4 +121,6 @@ export function ProductShowcaseMockup({ variant }: ProductShowcaseMockupProps) {
   }
 
   return null;
-}
+};
+
+export default ProductShowcaseMockup;

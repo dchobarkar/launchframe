@@ -1,7 +1,9 @@
 import Link from "next/link";
-import { NewsletterForm } from "@/components/ui/NewsletterForm";
-import { SocialIconButton } from "@/components/ui/SocialIconButton";
 
+import NewsletterForm from "@/components/ui/NewsletterForm";
+import SocialIconButton from "@/components/ui/SocialIconButton";
+
+/** Footer with product info, nav links, legal links, social icons, and newsletter. */
 export interface FooterProps {
   productName: string;
   navLinks?: { label: string; href: string }[];
@@ -20,11 +22,11 @@ const defaultLegalLinks = [
   { label: "Terms", href: "#faq" },
 ];
 
-export function Footer({
+const Footer = ({
   productName,
   navLinks = defaultNavLinks,
   legalLinks = defaultLegalLinks,
-}: FooterProps) {
+}: FooterProps) => {
   const socialLinks = [
     { iconKey: "Twitter" as const, href: "#", label: "Twitter" },
     { iconKey: "Github" as const, href: "#", label: "GitHub" },
@@ -54,57 +56,53 @@ export function Footer({
           <div>
             <h4 className="font-medium mb-4">Product</h4>
             <ul className="space-y-3">
-              {(navLinks?.length ?? 0) > 0 ? (
-                navLinks!.map((link) => (
-                  <li key={link.href}>
-                    <Link
-                      href={link.href}
-                      className="text-zinc-500 hover:text-zinc-300 text-sm transition-colors"
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))
-              ) : (
-                defaultNavLinks.map((link) => (
-                  <li key={link.href}>
-                    <Link
-                      href={link.href}
-                      className="text-zinc-500 hover:text-zinc-300 text-sm"
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))
-              )}
+              {(navLinks?.length ?? 0) > 0
+                ? navLinks!.map((link) => (
+                    <li key={link.href}>
+                      <Link
+                        href={link.href}
+                        className="text-zinc-500 hover:text-zinc-300 text-sm transition-colors"
+                      >
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))
+                : defaultNavLinks.map((link) => (
+                    <li key={link.href}>
+                      <Link
+                        href={link.href}
+                        className="text-zinc-500 hover:text-zinc-300 text-sm"
+                      >
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))}
             </ul>
           </div>
           <div>
             <h4 className="font-medium mb-4">Legal</h4>
             <ul className="space-y-3">
-              {(legalLinks?.length ?? 0) > 0 ? (
-                legalLinks!.map((link) => (
-                  <li key={link.href}>
-                    <Link
-                      href={link.href}
-                      className="text-zinc-500 hover:text-zinc-300 text-sm transition-colors"
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))
-              ) : (
-                defaultLegalLinks.map((link) => (
-                  <li key={link.href}>
-                    <Link
-                      href={link.href}
-                      className="text-zinc-500 hover:text-zinc-300 text-sm"
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))
-              )}
+              {(legalLinks?.length ?? 0) > 0
+                ? legalLinks!.map((link) => (
+                    <li key={link.href}>
+                      <Link
+                        href={link.href}
+                        className="text-zinc-500 hover:text-zinc-300 text-sm transition-colors"
+                      >
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))
+                : defaultLegalLinks.map((link) => (
+                    <li key={link.href}>
+                      <Link
+                        href={link.href}
+                        className="text-zinc-500 hover:text-zinc-300 text-sm"
+                      >
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))}
             </ul>
           </div>
         </div>
@@ -117,4 +115,6 @@ export function Footer({
       </div>
     </footer>
   );
-}
+};
+
+export default Footer;

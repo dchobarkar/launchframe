@@ -1,8 +1,11 @@
+/**
+ * Root layout. Applies fonts, global styles, and default metadata.
+ */
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 
-import "./globals.css";
 import { rootMetadata } from "@/data/metadata";
+import "./globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,11 +19,11 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = rootMetadata;
 
-export default function RootLayout({
+const Layout = ({
   children,
 }: Readonly<{
   children: React.ReactNode;
-}>) {
+}>) => {
   return (
     <html lang="en">
       <body
@@ -30,4 +33,6 @@ export default function RootLayout({
       </body>
     </html>
   );
-}
+};
+
+export default Layout;

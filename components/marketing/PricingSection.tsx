@@ -1,10 +1,15 @@
 "use client";
 
+/**
+ * Pricing section with monthly/yearly toggle and plan cards.
+ * Opens PlanActivationModal on CTA click (demo flow).
+ */
 import { useState } from "react";
-import { PricingCard } from "./PricingCard";
-import { PricingToggle } from "./PricingToggle";
-import { PlanActivationModal } from "@/components/ui/PlanActivationModal";
-import type { PricingData } from "@/data";
+
+import PricingCard from "./PricingCard";
+import PricingToggle from "./PricingToggle";
+import PlanActivationModal from "@/components/ui/PlanActivationModal";
+import type { PricingData } from "@/data/types";
 
 export interface PricingSectionProps {
   headline: string;
@@ -12,11 +17,7 @@ export interface PricingSectionProps {
   items: PricingData[];
 }
 
-export function PricingSection({
-  headline,
-  subtext,
-  items,
-}: PricingSectionProps) {
+const PricingSection = ({ headline, subtext, items }: PricingSectionProps) => {
   const [billingPeriod, setBillingPeriod] = useState<"monthly" | "yearly">(
     "monthly",
   );
@@ -68,4 +69,6 @@ export function PricingSection({
       )}
     </section>
   );
-}
+};
+
+export default PricingSection;
