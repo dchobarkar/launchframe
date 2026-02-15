@@ -218,6 +218,6 @@ export const aiStartupData: LandingPageData = {
     headline: "Launch your AI assistant today",
     subtext: "Free forever for individuals. No credit card required.",
     primaryCta: { label: "Try Copilot free", href: "#pricing" },
-    secondaryCta: { label: "Watch demo", href: "#features" },
+    secondaryCta: { label: "Watch demo", href: "#demo" },
   },
 };

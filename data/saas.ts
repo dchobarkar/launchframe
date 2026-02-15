@@ -214,6 +214,6 @@ export const saasData: LandingPageData = {
     headline: "Start your free trial",
     subtext: "No credit card required. 14 days free. Cancel anytime.",
     primaryCta: { label: "Get started free", href: "#pricing" },
-    secondaryCta: { label: "Talk to sales", href: "#faq" },
+    secondaryCta: { label: "Talk to sales", href: "#pricing" },
   },
 };

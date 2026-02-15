@@ -67,6 +67,7 @@ export default function AIStartupPage() {
       </section>
 
       <ProductShowcase
+        id="demo"
         headline={productShowcase.headline}
         subtext={productShowcase.subtext}
         mockup={
