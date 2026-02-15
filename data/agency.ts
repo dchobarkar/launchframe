@@ -21,12 +21,12 @@ export const agencyData: LandingPageData = {
   logoCloud: {
     headline: "Trusted by ambitious brands",
     logos: [
+      { name: "Nike" },
+      { name: "Airbnb" },
+      { name: "Spotify" },
       { name: "Stripe" },
-      { name: "Vercel" },
-      { name: "Figma" },
-      { name: "Notion" },
-      { name: "Linear" },
-      { name: "Slack" },
+      { name: "ScaleUp" },
+      { name: "Dropbox" },
     ],
   },
   features: {

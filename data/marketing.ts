@@ -21,12 +21,12 @@ export const marketingData: LandingPageData = {
   logoCloud: {
     headline: "Trusted by growth teams",
     logos: [
-      { name: "Stripe" },
-      { name: "Slack" },
-      { name: "Notion" },
-      { name: "Zapier" },
-      { name: "Segment" },
+      { name: "Mailchimp" },
       { name: "HubSpot" },
+      { name: "Klaviyo" },
+      { name: "Segment" },
+      { name: "Stripe" },
+      { name: "Zapier" },
     ],
   },
   features: {
@@ -97,11 +97,11 @@ export const marketingData: LandingPageData = {
       "E-commerce, CRM, ads, and data warehouses.",
     items: [
       { name: "Stripe" },
-      { name: "Slack" },
-      { name: "Zapier" },
+      { name: "Shopify" },
+      { name: "HubSpot" },
+      { name: "Klaviyo" },
       { name: "Segment" },
-      { name: "Snowflake" },
-      { name: "BigQuery" },
+      { name: "Zapier" },
     ],
   },
   pricing: {

@@ -22,11 +22,11 @@ export const fintechData: LandingPageData = {
     headline: "Trusted by leading fintechs",
     logos: [
       { name: "Stripe" },
-      { name: "Vercel" },
-      { name: "Linear" },
-      { name: "Notion" },
-      { name: "Slack" },
-      { name: "Figma" },
+      { name: "Plaid" },
+      { name: "Mercury" },
+      { name: "Ramp" },
+      { name: "PayFlow" },
+      { name: "FinanceOS" },
     ],
   },
   features: {
@@ -97,11 +97,11 @@ export const fintechData: LandingPageData = {
       "Banks, processors, and data providers.",
     items: [
       { name: "Stripe" },
-      { name: "Slack" },
-      { name: "Notion" },
-      { name: "Zapier" },
-      { name: "Segment" },
-      { name: "Snowflake" },
+      { name: "Plaid" },
+      { name: "Mercury" },
+      { name: "Ramp" },
+      { name: "Dwolla" },
+      { name: "Synapse" },
     ],
   },
   pricing: {

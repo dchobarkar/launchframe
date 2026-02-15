@@ -24,9 +24,9 @@ export const ecommerceData: LandingPageData = {
       { name: "Stripe" },
       { name: "Shopify" },
       { name: "Mailchimp" },
-      { name: "Notion" },
-      { name: "Slack" },
-      { name: "Figma" },
+      { name: "Klaviyo" },
+      { name: "ShipStation" },
+      { name: "BigCommerce" },
     ],
   },
   features: {
@@ -97,11 +97,11 @@ export const ecommerceData: LandingPageData = {
       "Payments, email, shipping, and more.",
     items: [
       { name: "Stripe" },
-      { name: "Slack" },
-      { name: "Notion" },
+      { name: "Shopify" },
+      { name: "Mailchimp" },
+      { name: "Klaviyo" },
+      { name: "ShipStation" },
       { name: "Zapier" },
-      { name: "Segment" },
-      { name: "Snowflake" },
     ],
   },
   pricing: {

@@ -4,7 +4,7 @@ export const variantLinks: VariantLink[] = [
   {
     slug: "saas",
     name: "SaaS Product",
-    description: "Analytics platform / AI tool / Dev product",
+    description: "Analytics platform / dashboards / product insights",
     iconKey: "BarChart3",
     href: "/saas",
   },
