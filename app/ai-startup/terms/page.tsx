@@ -1,11 +1,12 @@
 import { LegalPage } from "@/components/legal/LegalPage";
 import { termsContent } from "@/data/legal";
-import { aiStartupNavConfig } from "@/data";
+import { aiStartupNavConfig, getLegalMetadata } from "@/data";
 
-export const metadata = {
-  title: "Terms of Service — Copilot AI",
-  description: "Copilot AI terms of service. Read our terms and conditions.",
-};
+export const metadata = getLegalMetadata(
+  aiStartupNavConfig.productName,
+  "terms",
+  "/ai-startup/terms"
+);
 
 export default function TermsPage() {
   return (

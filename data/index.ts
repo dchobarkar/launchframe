@@ -1,5 +1,12 @@
 export * from "./types";
 export * from "./icons";
+export {
+  rootMetadata,
+  variantMetadata,
+  toMetadata,
+  getLegalMetadata,
+  SITE_URL,
+} from "./metadata";
 export { saasData } from "./saas";
 export { aiStartupData } from "./ai-startup";
 export { creatorToolData } from "./creator-tool";

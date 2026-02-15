@@ -1,11 +1,12 @@
 import { LegalPage } from "@/components/legal/LegalPage";
 import { termsContent } from "@/data/legal";
-import { creatorToolNavConfig } from "@/data";
+import { creatorToolNavConfig, getLegalMetadata } from "@/data";
 
-export const metadata = {
-  title: "Terms of Service — Portify",
-  description: "Portify terms of service. Read our terms and conditions.",
-};
+export const metadata = getLegalMetadata(
+  creatorToolNavConfig.productName,
+  "terms",
+  "/creator-tool/terms"
+);
 
 export default function TermsPage() {
   return (

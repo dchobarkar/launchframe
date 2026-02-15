@@ -1,11 +1,12 @@
 import { LegalPage } from "@/components/legal/LegalPage";
 import { privacyContent } from "@/data/legal";
-import { saasNavConfig } from "@/data";
+import { getLegalMetadata, saasNavConfig } from "@/data";
 
-export const metadata = {
-  title: "Privacy Policy — MetricFlow",
-  description: "MetricFlow privacy policy. Learn how we collect, use, and protect your data.",
-};
+export const metadata = getLegalMetadata(
+  saasNavConfig.productName,
+  "privacy",
+  "/saas/privacy"
+);
 
 export default function PrivacyPage() {
   return (

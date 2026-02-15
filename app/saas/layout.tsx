@@ -1,25 +1,12 @@
 import type { Metadata } from "next";
 import { Nav, Footer } from "@/components/marketing";
-import { saasNavConfig } from "@/data";
+import { saasNavConfig, toMetadata, variantMetadata } from "@/data";
 import "@/styles/variants/saas.css";
 
-export const metadata: Metadata = {
-  title: "MetricFlow — Analytics Platform for Modern Teams",
-  description:
-    "Real-time analytics, AI-powered insights, and beautiful dashboards. Built for developers and product teams who need to move fast.",
-  openGraph: {
-    title: "MetricFlow — Analytics Platform for Modern Teams",
-    description:
-      "Real-time analytics, AI-powered insights, and beautiful dashboards.",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "MetricFlow — Analytics Platform for Modern Teams",
-    description:
-      "Real-time analytics, AI-powered insights, and beautiful dashboards.",
-  },
-};
+export const metadata: Metadata = toMetadata(
+  variantMetadata["saas"],
+  "/saas"
+);
 
 export default function SaaSLayout({
   children,

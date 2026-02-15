@@ -1,23 +1,12 @@
 import type { Metadata } from "next";
 import { Nav, Footer } from "@/components/marketing";
-import { creatorToolNavConfig } from "@/data";
+import { creatorToolNavConfig, toMetadata, variantMetadata } from "@/data";
 import "@/styles/variants/creator-tool.css";
 
-export const metadata: Metadata = {
-  title: "Portify — Portfolio Builder for Creators",
-  description:
-    "Build a stunning portfolio in minutes. No code required. Templates for designers, developers, photographers, and writers.",
-  openGraph: {
-    title: "Portify — Portfolio Builder for Creators",
-    description: "Build a stunning portfolio in minutes. No code required.",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Portify — Portfolio Builder for Creators",
-    description: "Build a stunning portfolio in minutes. No code required.",
-  },
-};
+export const metadata: Metadata = toMetadata(
+  variantMetadata["creator-tool"],
+  "/creator-tool"
+);
 
 export default function CreatorToolLayout({
   children,

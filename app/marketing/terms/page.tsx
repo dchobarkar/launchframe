@@ -1,11 +1,12 @@
 import { LegalPage } from "@/components/legal/LegalPage";
 import { termsContent } from "@/data/legal";
-import { marketingNavConfig } from "@/data";
+import { getLegalMetadata, marketingNavConfig } from "@/data";
 
-export const metadata = {
-  title: "Terms of Service — GrowthLab",
-  description: "GrowthLab terms of service.",
-};
+export const metadata = getLegalMetadata(
+  marketingNavConfig.productName,
+  "terms",
+  "/marketing/terms"
+);
 
 export default function TermsPage() {
   return (

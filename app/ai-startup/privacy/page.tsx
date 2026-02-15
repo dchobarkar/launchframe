@@ -1,11 +1,12 @@
 import { LegalPage } from "@/components/legal/LegalPage";
 import { privacyContent } from "@/data/legal";
-import { aiStartupNavConfig } from "@/data";
+import { aiStartupNavConfig, getLegalMetadata } from "@/data";
 
-export const metadata = {
-  title: "Privacy Policy — Copilot AI",
-  description: "Copilot AI privacy policy. Learn how we collect, use, and protect your data.",
-};
+export const metadata = getLegalMetadata(
+  aiStartupNavConfig.productName,
+  "privacy",
+  "/ai-startup/privacy"
+);
 
 export default function PrivacyPage() {
   return (

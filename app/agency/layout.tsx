@@ -1,23 +1,12 @@
 import type { Metadata } from "next";
 import { Nav, Footer } from "@/components/marketing";
-import { agencyNavConfig } from "@/data";
+import { agencyNavConfig, toMetadata, variantMetadata } from "@/data";
 import "@/styles/variants/agency.css";
 
-export const metadata: Metadata = {
-  title: "Lumina Studio — Brand & Design Agency",
-  description:
-    "Strategy, design, and development for ambitious companies. From concept to launch.",
-  openGraph: {
-    title: "Lumina Studio — Brand & Design Agency",
-    description: "We build brands that move people.",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Lumina Studio — Brand & Design Agency",
-    description: "We build brands that move people.",
-  },
-};
+export const metadata: Metadata = toMetadata(
+  variantMetadata["agency"],
+  "/agency"
+);
 
 export default function AgencyLayout({
   children,

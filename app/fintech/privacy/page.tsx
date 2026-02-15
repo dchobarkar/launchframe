@@ -1,11 +1,12 @@
 import { LegalPage } from "@/components/legal/LegalPage";
 import { privacyContent } from "@/data/legal";
-import { fintechNavConfig } from "@/data";
+import { fintechNavConfig, getLegalMetadata } from "@/data";
 
-export const metadata = {
-  title: "Privacy Policy — PayStack",
-  description: "PayStack privacy policy.",
-};
+export const metadata = getLegalMetadata(
+  fintechNavConfig.productName,
+  "privacy",
+  "/fintech/privacy"
+);
 
 export default function PrivacyPage() {
   return (

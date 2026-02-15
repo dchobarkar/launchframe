@@ -1,11 +1,12 @@
 import { LegalPage } from "@/components/legal/LegalPage";
 import { privacyContent } from "@/data/legal";
-import { ecommerceNavConfig } from "@/data";
+import { ecommerceNavConfig, getLegalMetadata } from "@/data";
 
-export const metadata = {
-  title: "Privacy Policy — Storefront",
-  description: "Storefront privacy policy.",
-};
+export const metadata = getLegalMetadata(
+  ecommerceNavConfig.productName,
+  "privacy",
+  "/ecommerce/privacy"
+);
 
 export default function PrivacyPage() {
   return (

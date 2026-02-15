@@ -1,11 +1,12 @@
 import { LegalPage } from "@/components/legal/LegalPage";
 import { privacyContent } from "@/data/legal";
-import { agencyNavConfig } from "@/data";
+import { agencyNavConfig, getLegalMetadata } from "@/data";
 
-export const metadata = {
-  title: "Privacy Policy — Lumina Studio",
-  description: "Lumina Studio privacy policy.",
-};
+export const metadata = getLegalMetadata(
+  agencyNavConfig.productName,
+  "privacy",
+  "/agency/privacy"
+);
 
 export default function PrivacyPage() {
   return (

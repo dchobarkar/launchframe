@@ -1,11 +1,12 @@
 import { LegalPage } from "@/components/legal/LegalPage";
 import { termsContent } from "@/data/legal";
-import { ecommerceNavConfig } from "@/data";
+import { ecommerceNavConfig, getLegalMetadata } from "@/data";
 
-export const metadata = {
-  title: "Terms of Service — Storefront",
-  description: "Storefront terms of service.",
-};
+export const metadata = getLegalMetadata(
+  ecommerceNavConfig.productName,
+  "terms",
+  "/ecommerce/terms"
+);
 
 export default function TermsPage() {
   return (

@@ -1,11 +1,12 @@
 import { LegalPage } from "@/components/legal/LegalPage";
 import { termsContent } from "@/data/legal";
-import { devToolsNavConfig } from "@/data";
+import { devToolsNavConfig, getLegalMetadata } from "@/data";
 
-export const metadata = {
-  title: "Terms of Service — APIbase",
-  description: "APIbase terms of service.",
-};
+export const metadata = getLegalMetadata(
+  devToolsNavConfig.productName,
+  "terms",
+  "/dev-tools/terms"
+);
 
 export default function TermsPage() {
   return (

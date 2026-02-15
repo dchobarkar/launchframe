@@ -1,11 +1,12 @@
 import { LegalPage } from "@/components/legal/LegalPage";
 import { termsContent } from "@/data/legal";
-import { fintechNavConfig } from "@/data";
+import { fintechNavConfig, getLegalMetadata } from "@/data";
 
-export const metadata = {
-  title: "Terms of Service — PayStack",
-  description: "PayStack terms of service.",
-};
+export const metadata = getLegalMetadata(
+  fintechNavConfig.productName,
+  "terms",
+  "/fintech/terms"
+);
 
 export default function TermsPage() {
   return (

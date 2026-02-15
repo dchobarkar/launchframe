@@ -1,11 +1,12 @@
 import { LegalPage } from "@/components/legal/LegalPage";
 import { privacyContent } from "@/data/legal";
-import { devToolsNavConfig } from "@/data";
+import { devToolsNavConfig, getLegalMetadata } from "@/data";
 
-export const metadata = {
-  title: "Privacy Policy — APIbase",
-  description: "APIbase privacy policy.",
-};
+export const metadata = getLegalMetadata(
+  devToolsNavConfig.productName,
+  "privacy",
+  "/dev-tools/privacy"
+);
 
 export default function PrivacyPage() {
   return (
