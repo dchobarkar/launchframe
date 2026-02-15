@@ -12,6 +12,7 @@ export const saasNavConfig: NavConfig = {
     { label: "Features", href: "/saas#features" },
     { label: "Pricing", href: "/saas#pricing" },
     { label: "Integrations", href: "/saas#integrations" },
+    { label: "Contact", href: "/saas#contact" },
   ],
   legalLinks: [
     { label: "Privacy", href: "/saas/privacy" },
@@ -25,6 +26,7 @@ export const aiStartupNavConfig: NavConfig = {
     { label: "Features", href: "/ai-startup#features" },
     { label: "Pricing", href: "/ai-startup#pricing" },
     { label: "Integrations", href: "/ai-startup#integrations" },
+    { label: "Contact", href: "/ai-startup#contact" },
   ],
   legalLinks: [
     { label: "Privacy", href: "/ai-startup/privacy" },
@@ -38,6 +40,7 @@ export const creatorToolNavConfig: NavConfig = {
     { label: "Features", href: "/creator-tool#features" },
     { label: "Pricing", href: "/creator-tool#pricing" },
     { label: "Templates", href: "/creator-tool#templates" },
+    { label: "Contact", href: "/creator-tool#contact" },
   ],
   legalLinks: [
     { label: "Privacy", href: "/creator-tool/privacy" },

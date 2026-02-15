@@ -191,6 +191,11 @@ export const creatorToolData: LandingPageData = {
       },
     ],
   },
+  contact: {
+    headline: "Get in touch",
+    subtext:
+      "Need help with your portfolio? Drop us a line and we'll respond within 24 hours.",
+  },
   faq: {
     headline: "Frequently asked questions",
     items: [

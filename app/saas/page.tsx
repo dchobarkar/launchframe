@@ -6,6 +6,7 @@ import {
   IntegrationGrid,
   PricingSection,
   TestimonialCard,
+  ContactSection,
   FAQAccordion,
   CTASection,
 } from "@/components/marketing";
@@ -23,6 +24,7 @@ export default function SaaSPage() {
     integrations,
     pricing,
     testimonials,
+    contact,
     faq,
     cta,
   } = saasData;
@@ -121,6 +123,11 @@ export default function SaaSPage() {
         subtext={cta.subtext}
         primaryCta={cta.primaryCta}
         secondaryCta={cta.secondaryCta}
+      />
+
+      <ContactSection
+        headline={contact.headline}
+        subtext={contact.subtext}
       />
     </main>
   );

@@ -7,6 +7,7 @@ export { TestimonialCard } from "./TestimonialCard";
 export { LogoCloud } from "./LogoCloud";
 export { CTASection } from "./CTASection";
 export { IntegrationGrid } from "./IntegrationGrid";
+export { ContactSection } from "./ContactSection";
 export { FAQAccordion } from "./FAQAccordion";
 export { ProductShowcase } from "./ProductShowcase";
 export { Footer } from "./Footer";

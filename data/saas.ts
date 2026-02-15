@@ -185,6 +185,11 @@ export const saasData: LandingPageData = {
       },
     ],
   },
+  contact: {
+    headline: "Get in touch",
+    subtext:
+      "Have questions? We'd love to hear from you. Send us a message and we'll respond within 24 hours.",
+  },
   faq: {
     headline: "Frequently asked questions",
     items: [

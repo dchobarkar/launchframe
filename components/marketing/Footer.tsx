@@ -12,6 +12,7 @@ const defaultNavLinks = [
   { label: "Features", href: "#features" },
   { label: "Pricing", href: "#pricing" },
   { label: "Integrations", href: "#integrations" },
+  { label: "Contact", href: "#contact" },
 ];
 
 const defaultLegalLinks = [

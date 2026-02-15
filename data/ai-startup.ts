@@ -189,6 +189,11 @@ export const aiStartupData: LandingPageData = {
       },
     ],
   },
+  contact: {
+    headline: "Get in touch",
+    subtext:
+      "Questions about Copilot? Our team is here to help. Reach out and we'll get back to you soon.",
+  },
   faq: {
     headline: "Frequently asked questions",
     items: [
