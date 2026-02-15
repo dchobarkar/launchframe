@@ -40,6 +40,9 @@ export interface PricingData {
   name: string;
   price: string;
   period: string;
+  priceYearly?: string;
+  periodYearly?: string;
+  priceYearlyTotal?: string;
   description: string;
   features: string[];
   ctaLabel: string;
@@ -64,6 +67,11 @@ export interface SectionHeadlineData {
   subtext?: string;
 }
 
+export interface ContactData {
+  headline: string;
+  subtext?: string;
+}
+
 export interface LandingPageData {
   variant: "saas" | "ai" | "creator";
   hero: HeroData;
@@ -73,6 +81,7 @@ export interface LandingPageData {
   integrations: SectionHeadlineData & { items: IntegrationData[] };
   pricing: SectionHeadlineData & { items: PricingData[] };
   testimonials: SectionHeadlineData & { items: TestimonialData[] };
+  contact: ContactData;
   faq: { headline: string; items: FAQItemData[] };
   cta: {
     headline: string;

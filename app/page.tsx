@@ -5,7 +5,7 @@ import { getVariantIcon } from "@/data/icons";
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center px-4">
+    <main className="min-h-screen flex flex-col items-center justify-center px-4 py-12 sm:py-16 md:py-24">
       <div
         className="absolute inset-0 -z-10"
         style={{

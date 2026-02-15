@@ -33,7 +33,11 @@ export default function SaaSLayout({
         links={saasNavConfig.links}
       />
       {children}
-      <Footer productName={saasNavConfig.productName} />
+      <Footer
+        productName={saasNavConfig.productName}
+        navLinks={saasNavConfig.links}
+        legalLinks={saasNavConfig.legalLinks}
+      />
     </div>
   );
 }

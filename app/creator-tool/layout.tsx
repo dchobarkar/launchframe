@@ -31,7 +31,11 @@ export default function CreatorToolLayout({
         links={creatorToolNavConfig.links}
       />
       {children}
-      <Footer productName={creatorToolNavConfig.productName} />
+      <Footer
+        productName={creatorToolNavConfig.productName}
+        navLinks={creatorToolNavConfig.links}
+        legalLinks={creatorToolNavConfig.legalLinks}
+      />
     </div>
   );
 }

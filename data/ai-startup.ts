@@ -6,8 +6,8 @@ export const aiStartupData: LandingPageData = {
     headline: "Your AI copilot for work",
     subtext:
       "Automate tasks, draft documents, and get instant answers. Copilot AI works alongside you in every app — no context switching.",
-    primaryCta: { label: "Try Copilot free", href: "#" },
-    secondaryCta: { label: "See how it works", href: "#" },
+    primaryCta: { label: "Try Copilot free", href: "#pricing" },
+    secondaryCta: { label: "See how it works", href: "#features" },
     trustBadges: [
       "Used by 10,000+ professionals",
       "Google",
@@ -111,6 +111,8 @@ export const aiStartupData: LandingPageData = {
         name: "Free",
         price: "$0",
         period: "/mo",
+        priceYearly: "$0",
+        periodYearly: "/yr",
         description: "For trying Copilot",
         features: [
           "50 tasks/month",
@@ -118,13 +120,16 @@ export const aiStartupData: LandingPageData = {
           "Email support",
           "Community access",
         ],
-        ctaLabel: "Get started",
-        ctaHref: "#",
+        ctaLabel: "Get started free",
+        ctaHref: "#pricing",
       },
       {
         name: "Pro",
         price: "$29",
         period: "/mo",
+        priceYearly: "$23",
+        periodYearly: "/mo",
+        priceYearlyTotal: "$276",
         description: "For power users",
         features: [
           "Unlimited tasks",
@@ -134,13 +139,16 @@ export const aiStartupData: LandingPageData = {
           "API access",
         ],
         ctaLabel: "Start free trial",
-        ctaHref: "#",
+        ctaHref: "#pricing",
         highlighted: true,
       },
       {
         name: "Team",
         price: "$79",
         period: "/mo",
+        priceYearly: "$63",
+        periodYearly: "/mo",
+        priceYearlyTotal: "$756",
         description: "For teams",
         features: [
           "Everything in Pro",
@@ -150,7 +158,7 @@ export const aiStartupData: LandingPageData = {
           "SSO",
         ],
         ctaLabel: "Contact sales",
-        ctaHref: "#",
+        ctaHref: "#faq",
       },
     ],
   },
@@ -181,6 +189,11 @@ export const aiStartupData: LandingPageData = {
       },
     ],
   },
+  contact: {
+    headline: "Get in touch",
+    subtext:
+      "Questions about Copilot? Our team is here to help. Reach out and we'll get back to you soon.",
+  },
   faq: {
     headline: "Frequently asked questions",
     items: [
@@ -209,7 +222,7 @@ export const aiStartupData: LandingPageData = {
   cta: {
     headline: "Launch your AI assistant today",
     subtext: "Free forever for individuals. No credit card required.",
-    primaryCta: { label: "Try Copilot free", href: "#" },
-    secondaryCta: { label: "Watch demo", href: "#" },
+    primaryCta: { label: "Try Copilot free", href: "#pricing" },
+    secondaryCta: { label: "Watch demo", href: "#demo" },
   },
 };

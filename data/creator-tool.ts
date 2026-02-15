@@ -6,8 +6,8 @@ export const creatorToolData: LandingPageData = {
     headline: "Your portfolio, perfected",
     subtext:
       "Build a stunning portfolio in minutes. No code, no design skills needed. Templates for designers, developers, and creators.",
-    primaryCta: { label: "Start building free", href: "#" },
-    secondaryCta: { label: "Browse templates", href: "#" },
+    primaryCta: { label: "Start building free", href: "#pricing" },
+    secondaryCta: { label: "Browse templates", href: "#templates" },
     trustBadges: [
       "50,000+ portfolios created",
       "Behance",
@@ -113,6 +113,8 @@ export const creatorToolData: LandingPageData = {
         name: "Free",
         price: "$0",
         period: "/mo",
+        priceYearly: "$0",
+        periodYearly: "/yr",
         description: "For getting started",
         features: [
           "1 portfolio",
@@ -120,13 +122,16 @@ export const creatorToolData: LandingPageData = {
           "Portify subdomain",
           "Basic templates",
         ],
-        ctaLabel: "Get started",
-        ctaHref: "#",
+        ctaLabel: "Get started free",
+        ctaHref: "#pricing",
       },
       {
         name: "Pro",
         price: "$12",
         period: "/mo",
+        priceYearly: "$10",
+        periodYearly: "/mo",
+        priceYearlyTotal: "$120",
         description: "For serious creators",
         features: [
           "Unlimited projects",
@@ -136,13 +141,16 @@ export const creatorToolData: LandingPageData = {
           "Remove branding",
         ],
         ctaLabel: "Start free trial",
-        ctaHref: "#",
+        ctaHref: "#pricing",
         highlighted: true,
       },
       {
         name: "Studio",
         price: "$29",
         period: "/mo",
+        priceYearly: "$24",
+        periodYearly: "/mo",
+        priceYearlyTotal: "$288",
         description: "For agencies",
         features: [
           "Everything in Pro",
@@ -152,7 +160,7 @@ export const creatorToolData: LandingPageData = {
           "Priority support",
         ],
         ctaLabel: "Contact sales",
-        ctaHref: "#",
+        ctaHref: "#faq",
       },
     ],
   },
@@ -183,6 +191,11 @@ export const creatorToolData: LandingPageData = {
       },
     ],
   },
+  contact: {
+    headline: "Get in touch",
+    subtext:
+      "Need help with your portfolio? Drop us a line and we'll respond within 24 hours.",
+  },
   faq: {
     headline: "Frequently asked questions",
     items: [
@@ -211,7 +224,7 @@ export const creatorToolData: LandingPageData = {
   cta: {
     headline: "Build your portfolio today",
     subtext: "Free forever. No credit card. Launch in minutes.",
-    primaryCta: { label: "Start building free", href: "#" },
-    secondaryCta: { label: "View templates", href: "#" },
+    primaryCta: { label: "Start building free", href: "#pricing" },
+    secondaryCta: { label: "View templates", href: "#templates" },
   },
 };

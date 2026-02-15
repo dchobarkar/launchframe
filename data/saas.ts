@@ -6,8 +6,8 @@ export const saasData: LandingPageData = {
     headline: "Analytics that move at your speed",
     subtext:
       "Real-time dashboards, AI-powered insights, and APIs built for developers. Ship faster with data you can trust.",
-    primaryCta: { label: "Start free trial", href: "#" },
-    secondaryCta: { label: "View demo", href: "#" },
+    primaryCta: { label: "Start free trial", href: "#pricing" },
+    secondaryCta: { label: "View demo", href: "#features" },
     trustBadges: [
       "Trusted by 5,000+ teams",
       "Stripe",
@@ -26,7 +26,7 @@ export const saasData: LandingPageData = {
       { name: "Linear" },
       { name: "Notion" },
       { name: "Figma" },
-      { name: "Vercel" },
+      { name: "GitHub" },
     ],
   },
   features: {
@@ -112,20 +112,25 @@ export const saasData: LandingPageData = {
         name: "Starter",
         price: "$0",
         period: "/mo",
+        priceYearly: "$0",
+        periodYearly: "/yr",
         description: "For side projects and experiments",
         features: [
           "10K events/month",
           "3 dashboards",
-          "7-day retention",
+          "7-day data retention",
           "Community support",
         ],
-        ctaLabel: "Get started",
-        ctaHref: "#",
+        ctaLabel: "Get started free",
+        ctaHref: "#pricing",
       },
       {
         name: "Pro",
         price: "$99",
         period: "/mo",
+        priceYearly: "$79",
+        periodYearly: "/mo",
+        priceYearlyTotal: "$948",
         description: "For growing teams",
         features: [
           "1M events/month",
@@ -135,7 +140,7 @@ export const saasData: LandingPageData = {
           "Custom domains",
         ],
         ctaLabel: "Start free trial",
-        ctaHref: "#",
+        ctaHref: "#pricing",
         highlighted: true,
       },
       {
@@ -151,7 +156,7 @@ export const saasData: LandingPageData = {
           "Custom contracts",
         ],
         ctaLabel: "Contact sales",
-        ctaHref: "#",
+        ctaHref: "#faq",
       },
     ],
   },
@@ -179,6 +184,11 @@ export const saasData: LandingPageData = {
         company: "DataDriven",
       },
     ],
+  },
+  contact: {
+    headline: "Get in touch",
+    subtext:
+      "Have questions? We'd love to hear from you. Send us a message and we'll respond within 24 hours.",
   },
   faq: {
     headline: "Frequently asked questions",
@@ -208,7 +218,7 @@ export const saasData: LandingPageData = {
   cta: {
     headline: "Start your free trial",
     subtext: "No credit card required. 14 days free. Cancel anytime.",
-    primaryCta: { label: "Get started free", href: "#" },
-    secondaryCta: { label: "Talk to sales", href: "#" },
+    primaryCta: { label: "Get started free", href: "#pricing" },
+    secondaryCta: { label: "Talk to sales", href: "#pricing" },
   },
 };

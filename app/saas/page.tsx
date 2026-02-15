@@ -4,8 +4,9 @@ import {
   FeatureCard,
   ProductShowcase,
   IntegrationGrid,
-  PricingCard,
+  PricingSection,
   TestimonialCard,
+  ContactSection,
   FAQAccordion,
   CTASection,
 } from "@/components/marketing";
@@ -23,6 +24,7 @@ export default function SaaSPage() {
     integrations,
     pricing,
     testimonials,
+    contact,
     faq,
     cta,
   } = saasData;
@@ -42,9 +44,9 @@ export default function SaaSPage() {
 
       <LogoCloud headline={logoCloud.headline} logos={logoCloud.logos} />
 
-      <section id="features" className="py-20">
+      <section id="features" className="py-16 md:py-20 scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12 md:mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold mb-4">
               {features.headline}
             </h2>
@@ -52,7 +54,7 @@ export default function SaaSPage() {
               {features.subtext}
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {features.items.map((item, i) => (
               <FeatureCard
                 key={i}
@@ -67,6 +69,7 @@ export default function SaaSPage() {
       </section>
 
       <ProductShowcase
+        id="demo"
         headline={productShowcase.headline}
         subtext={productShowcase.subtext}
         mockup={
@@ -75,7 +78,7 @@ export default function SaaSPage() {
         features={productShowcase.features}
       />
 
-      <div id="integrations">
+      <div id="integrations" className="scroll-mt-20">
         <IntegrationGrid
           headline={integrations.headline}
           subtext={integrations.subtext}
@@ -83,40 +86,15 @@ export default function SaaSPage() {
         />
       </div>
 
-      <section id="pricing" className="py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-              {pricing.headline}
-            </h2>
-            <p className="text-zinc-400 max-w-2xl mx-auto">{pricing.subtext}</p>
-            <div className="mt-6 inline-flex items-center gap-2 p-2 rounded-lg glass-card">
-              <span className="text-sm text-zinc-500">Monthly</span>
-              <div className="w-10 h-5 rounded-full accent-pill" />
-              <span className="text-sm font-medium">Yearly</span>
-            </div>
-          </div>
-          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {pricing.items.map((plan, i) => (
-              <PricingCard
-                key={i}
-                name={plan.name}
-                price={plan.price}
-                period={plan.period}
-                description={plan.description}
-                features={plan.features}
-                ctaLabel={plan.ctaLabel}
-                ctaHref={plan.ctaHref}
-                highlighted={plan.highlighted}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
+      <PricingSection
+        headline={pricing.headline}
+        subtext={pricing.subtext}
+        items={pricing.items}
+      />
 
-      <section className="py-20">
+      <section className="py-16 md:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12 md:mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold mb-4">
               {testimonials.headline}
             </h2>
@@ -145,6 +123,11 @@ export default function SaaSPage() {
         subtext={cta.subtext}
         primaryCta={cta.primaryCta}
         secondaryCta={cta.secondaryCta}
+      />
+
+      <ContactSection
+        headline={contact.headline}
+        subtext={contact.subtext}
       />
     </main>
   );

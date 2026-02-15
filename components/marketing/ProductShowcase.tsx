@@ -5,6 +5,7 @@ export interface ProductShowcaseProps {
   subtext?: string;
   mockup?: React.ReactNode;
   features?: { title: string; description: string }[];
+  id?: string;
 }
 
 export function ProductShowcase({
@@ -12,17 +13,18 @@ export function ProductShowcase({
   subtext,
   mockup,
   features = [],
+  id,
 }: ProductShowcaseProps) {
   return (
-    <section className="py-20">
+    <section id={id} className="py-16 md:py-20 scroll-mt-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">{headline}</h2>
           {subtext && (
             <p className="text-zinc-400 max-w-2xl mx-auto">{subtext}</p>
           )}
         </div>
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
           <div className="relative">
             {mockup ? (
               <div
@@ -42,7 +44,7 @@ export function ProductShowcase({
           {features.length > 0 && (
             <div className="space-y-6">
               {features.map((feature, i) => (
-                <div key={i} className="glass-card p-6 rounded-xl">
+                <div key={i} className="glass-card p-5 sm:p-6 rounded-xl">
                   <h3 className="font-semibold mb-2">{feature.title}</h3>
                   <p className="text-zinc-400 text-sm">{feature.description}</p>
                 </div>
