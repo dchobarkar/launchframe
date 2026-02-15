@@ -10,7 +10,7 @@ export interface HeroData {
   secondaryCta?: CtaLink;
   trustBadges: string[];
   announcementBanner?: string;
-  mockupVariant: "saas" | "ai" | "creator";
+  mockupVariant: "saas" | "ai" | "creator" | "agency" | "dev-tools" | "ecommerce" | "fintech" | "marketing";
 }
 
 export interface LogoItem {
@@ -28,7 +28,7 @@ export interface FeatureData {
 export interface ProductShowcaseData {
   headline: string;
   subtext?: string;
-  mockupVariant: "saas" | "ai" | "creator";
+  mockupVariant: "saas" | "ai" | "creator" | "agency" | "dev-tools" | "ecommerce" | "fintech" | "marketing";
   features: { title: string; description: string }[];
 }
 
@@ -73,7 +73,7 @@ export interface ContactData {
 }
 
 export interface LandingPageData {
-  variant: "saas" | "ai" | "creator";
+  variant: "saas" | "ai" | "creator" | "agency" | "dev-tools" | "ecommerce" | "fintech" | "marketing";
   hero: HeroData;
   logoCloud: { headline: string; logos: LogoItem[] };
   features: SectionHeadlineData & { items: FeatureData[] };

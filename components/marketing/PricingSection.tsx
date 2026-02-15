@@ -31,7 +31,9 @@ export function PricingSection({
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">{headline}</h2>
           <p className="text-zinc-400 max-w-2xl mx-auto">{subtext}</p>
-          <PricingToggle onToggle={(period) => setBillingPeriod(period)} />
+          {items.some((i) => i.priceYearly) && (
+            <PricingToggle onToggle={(period) => setBillingPeriod(period)} />
+          )}
         </div>
         <div className="grid md:grid-cols-3 gap-4 sm:gap-6 max-w-5xl mx-auto">
           {items.map((plan, i) => (

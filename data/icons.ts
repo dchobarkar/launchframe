@@ -40,6 +40,11 @@ export const VARIANT_ICONS: Record<string, LucideIcon> = {
   BarChart3,
   Bot,
   Palette,
+  Layout,
+  GitBranch,
+  Zap,
+  Shield,
+  TrendingUp,
   ArrowRight,
 };
 
