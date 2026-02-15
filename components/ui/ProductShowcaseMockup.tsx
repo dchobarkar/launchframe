@@ -11,7 +11,7 @@ export function ProductShowcaseMockup({ variant }: ProductShowcaseMockupProps) {
           <div className="flex-1 h-20 rounded bg-zinc-800/50" />
           <div className="flex-1 h-20 rounded bg-zinc-800/50" />
         </div>
-        <div className="h-48 rounded bg-zinc-800/30 border border-cyan-500/20" />
+        <div className="h-48 rounded bg-zinc-800/30 accent-border-muted" />
       </div>
     );
   }
@@ -19,12 +19,12 @@ export function ProductShowcaseMockup({ variant }: ProductShowcaseMockupProps) {
   if (variant === "ai") {
     return (
       <div className="p-6">
-        <div className="rounded-lg border border-violet-500/30 bg-violet-500/10 p-4">
-          <p className="text-sm text-violet-200 mb-2">
+        <div className="rounded-lg accent-border-muted accent-bg-muted p-4">
+          <p className="text-sm accent-text opacity-90 mb-2">
             &ldquo;Summarize my unread emails and draft responses for the top
             3&rdquo;
           </p>
-          <div className="h-2 w-24 rounded bg-violet-500/50 animate-pulse" />
+          <div className="h-2 w-24 rounded accent-bg-muted-strong animate-pulse" />
         </div>
         <div className="mt-4 space-y-2">
           {[1, 2, 3].map((i) => (
@@ -48,8 +48,8 @@ export function ProductShowcaseMockup({ variant }: ProductShowcaseMockupProps) {
           ))}
         </div>
         <div className="grid grid-cols-2 gap-4">
-          <div className="aspect-video rounded-lg bg-pink-500/20" />
-          <div className="aspect-video rounded-lg bg-violet-500/20" />
+          <div className="aspect-video rounded-lg accent-bg-muted" />
+          <div className="aspect-video rounded-lg accent-bg-muted" />
         </div>
       </div>
     );

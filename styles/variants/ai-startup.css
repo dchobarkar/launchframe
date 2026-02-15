@@ -1,0 +1,8 @@
+/* AI Startup variant — Violet/purple theme (Copilot AI) */
+[data-variant="ai-startup"] {
+  --accent: #a78bfa;
+  --accent-muted: rgba(167, 139, 250, 0.2);
+  --accent-muted-strong: rgba(167, 139, 250, 0.3);
+  --accent-glow: rgba(167, 139, 250, 0.4);
+  --accent-glow-secondary: rgba(244, 114, 182, 0.3);
+}

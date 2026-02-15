@@ -15,7 +15,7 @@ export function IntegrationGrid({
     <section className="py-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-400 text-sm mb-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full accent-bg-muted accent-text text-sm mb-4">
             <Plug className="w-4 h-4" />
             Integrations
           </div>
@@ -28,7 +28,7 @@ export function IntegrationGrid({
           {integrations.map((integration, i) => (
             <div
               key={i}
-              className="glass-card p-6 rounded-xl flex items-center justify-center hover:border-cyan-500/20 transition-colors"
+              className="glass-card p-6 rounded-xl flex items-center justify-center accent-hover-border transition-colors"
             >
               <span className="font-medium text-zinc-400">
                 {integration.name}

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Nav, Footer } from "@/components/marketing";
 import { saasNavConfig } from "@/data";
+import "@/styles/variants/saas.css";
 
 export const metadata: Metadata = {
   title: "MetricFlow — Analytics Platform for Modern Teams",
@@ -26,13 +27,13 @@ export default function SaaSLayout({
   children: React.ReactNode;
 }) {
   return (
-    <>
+    <div data-variant="saas">
       <Nav
         productName={saasNavConfig.productName}
         links={saasNavConfig.links}
       />
       {children}
       <Footer productName={saasNavConfig.productName} />
-    </>
+    </div>
   );
 }

@@ -33,7 +33,7 @@ export function Footer({
                   key={label}
                   href={href}
                   aria-label={label}
-                  className="w-10 h-10 rounded-lg glass-card flex items-center justify-center text-zinc-400 hover:text-cyan-400 transition-colors"
+                  className="w-10 h-10 rounded-lg glass-card flex items-center justify-center text-zinc-400 accent-hover transition-colors"
                 >
                   <Icon className="w-5 h-5" />
                 </a>
@@ -129,11 +129,11 @@ export function Footer({
             <input
               type="email"
               placeholder="Enter your email"
-              className="px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-sm placeholder:text-zinc-500 focus:outline-none focus:border-cyan-500/50 w-48"
+              className="px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-sm placeholder:text-zinc-500 focus:outline-none accent-focus w-48"
             />
             <button
               type="button"
-              className="px-4 py-2 rounded-lg bg-cyan-500/20 text-cyan-400 text-sm font-medium hover:bg-cyan-500/30 transition-colors"
+              className="px-4 py-2 rounded-lg accent-bg-muted accent-text text-sm font-medium hover:accent-bg-muted-strong transition-colors"
             >
               Subscribe
             </button>

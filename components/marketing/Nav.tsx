@@ -42,7 +42,7 @@ export function Nav({ productName, links = [] }: NavProps) {
             )}
             <Link
               href="#"
-              className="text-sm font-medium px-4 py-2 rounded-lg bg-cyan-500/20 text-cyan-400 hover:bg-cyan-500/30 transition-colors"
+              className="text-sm font-medium px-4 py-2 rounded-lg accent-bg-muted accent-text hover:accent-bg-muted-strong transition-colors"
             >
               Get Started
             </Link>

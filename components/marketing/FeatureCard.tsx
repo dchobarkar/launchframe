@@ -17,14 +17,14 @@ export function FeatureCard({
     <div
       className={`feature-card-hover p-6 rounded-xl ${
         highlighted
-          ? "glass-card border-cyan-500/30 bg-cyan-500/5"
+          ? "glass-card accent-border-muted accent-bg-muted"
           : "glass-card"
       }`}
     >
       <div
         className={`w-12 h-12 rounded-lg flex items-center justify-center mb-4 ${
           highlighted
-            ? "bg-cyan-500/20 text-cyan-400"
+            ? "accent-bg-muted-strong accent-text"
             : "bg-white/5 text-zinc-400"
         }`}
       >

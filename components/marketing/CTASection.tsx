@@ -22,8 +22,7 @@ export function CTASection({
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href={primaryCta.href}
-              className="cta-glow inline-flex items-center justify-center px-8 py-4 rounded-lg font-semibold text-background"
-              style={{ background: "var(--neon-cyan)" }}
+              className="cta-glow accent-bg inline-flex items-center justify-center px-8 py-4 rounded-lg font-semibold text-background"
             >
               {primaryCta.label}
             </Link>

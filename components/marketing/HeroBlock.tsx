@@ -19,15 +19,7 @@ export function HeroBlock({
   trustBadges = [],
   announcementBanner,
   productMockup,
-  variant = "saas",
 }: HeroBlockProps) {
-  const accentColor =
-    variant === "ai"
-      ? "var(--neon-violet)"
-      : variant === "creator"
-        ? "var(--neon-pink)"
-        : "var(--neon-cyan)";
-
   return (
     <section className="relative min-h-[90vh] flex flex-col justify-center overflow-hidden">
       {/* Gradient background */}
@@ -37,10 +29,7 @@ export function HeroBlock({
           background: `linear-gradient(180deg, var(--gradient-start) 0%, var(--gradient-mid) 50%, var(--gradient-end) 100%)`,
         }}
       />
-      <div
-        className="absolute top-0 left-1/2 -translate-x-1/2 w-200 h-100 -z-10 opacity-30 blur-3xl"
-        style={{ background: accentColor }}
-      />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-200 h-100 -z-10 opacity-30 blur-3xl accent-bg" />
 
       {announcementBanner && (
         <div
@@ -63,8 +52,7 @@ export function HeroBlock({
           <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center animate-fade-up animate-fade-up-delay-2">
             <Link
               href={primaryCta.href}
-              className="cta-glow inline-flex items-center justify-center px-8 py-4 rounded-lg font-semibold text-background transition-all"
-              style={{ background: accentColor }}
+              className="cta-glow accent-bg inline-flex items-center justify-center px-8 py-4 rounded-lg font-semibold text-background transition-all"
             >
               {primaryCta.label}
             </Link>

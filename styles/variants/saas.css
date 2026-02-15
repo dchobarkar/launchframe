@@ -1,0 +1,8 @@
+/* SaaS variant — Cyan/teal theme (MetricFlow) */
+[data-variant="saas"] {
+  --accent: #22d3ee;
+  --accent-muted: rgba(34, 211, 238, 0.2);
+  --accent-muted-strong: rgba(34, 211, 238, 0.3);
+  --accent-glow: rgba(34, 211, 238, 0.4);
+  --accent-glow-secondary: rgba(167, 139, 250, 0.3);
+}

@@ -15,7 +15,17 @@ import { aiStartupData } from "@/data";
 import { getFeatureIcon } from "@/data/icons";
 
 export default function AIStartupPage() {
-  const { hero, logoCloud, features, productShowcase, integrations, pricing, testimonials, faq, cta } = aiStartupData;
+  const {
+    hero,
+    logoCloud,
+    features,
+    productShowcase,
+    integrations,
+    pricing,
+    testimonials,
+    faq,
+    cta,
+  } = aiStartupData;
 
   return (
     <main className="pt-16">
@@ -59,7 +69,9 @@ export default function AIStartupPage() {
       <ProductShowcase
         headline={productShowcase.headline}
         subtext={productShowcase.subtext}
-        mockup={<ProductShowcaseMockup variant={productShowcase.mockupVariant} />}
+        mockup={
+          <ProductShowcaseMockup variant={productShowcase.mockupVariant} />
+        }
         features={productShowcase.features}
       />
 
@@ -77,12 +89,10 @@ export default function AIStartupPage() {
             <h2 className="text-3xl sm:text-4xl font-bold mb-4">
               {pricing.headline}
             </h2>
-            <p className="text-zinc-400 max-w-2xl mx-auto">
-              {pricing.subtext}
-            </p>
+            <p className="text-zinc-400 max-w-2xl mx-auto">{pricing.subtext}</p>
             <div className="mt-6 inline-flex items-center gap-2 p-2 rounded-lg glass-card">
               <span className="text-sm text-zinc-500">Monthly</span>
-              <div className="w-10 h-5 rounded-full bg-violet-500/30" />
+              <div className="w-10 h-5 rounded-full accent-pill" />
               <span className="text-sm font-medium">Yearly</span>
             </div>
           </div>

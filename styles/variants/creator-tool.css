@@ -1,0 +1,8 @@
+/* Creator Tool variant — Pink/magenta theme (Portify) */
+[data-variant="creator-tool"] {
+  --accent: #f472b6;
+  --accent-muted: rgba(244, 114, 182, 0.2);
+  --accent-muted-strong: rgba(244, 114, 182, 0.3);
+  --accent-glow: rgba(244, 114, 182, 0.4);
+  --accent-glow-secondary: rgba(167, 139, 250, 0.3);
+}

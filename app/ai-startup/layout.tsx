@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Nav, Footer } from "@/components/marketing";
 import { aiStartupNavConfig } from "@/data";
+import "@/styles/variants/ai-startup.css";
 
 export const metadata: Metadata = {
   title: "Copilot AI — Your AI-Powered Work Assistant",
@@ -26,13 +27,13 @@ export default function AIStartupLayout({
   children: React.ReactNode;
 }) {
   return (
-    <>
+    <div data-variant="ai-startup">
       <Nav
         productName={aiStartupNavConfig.productName}
         links={aiStartupNavConfig.links}
       />
       {children}
       <Footer productName={aiStartupNavConfig.productName} />
-    </>
+    </div>
   );
 }

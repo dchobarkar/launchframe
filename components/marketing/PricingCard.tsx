@@ -26,7 +26,7 @@ export function PricingCard({
     <div
       className={`pricing-toggle-transition p-8 rounded-xl h-full flex flex-col ${
         highlighted
-          ? "glass-card border-cyan-500/40 bg-cyan-500/5 scale-[1.02]"
+          ? "glass-card accent-border accent-bg-muted scale-[1.02]"
           : "glass-card"
       }`}
     >
@@ -39,7 +39,7 @@ export function PricingCard({
       <ul className="space-y-3 mb-8 flex-1">
         {features.map((feature, i) => (
           <li key={i} className="flex items-center gap-3 text-sm">
-            <Check className="w-5 h-5 text-cyan-500 shrink-0" />
+            <Check className="w-5 h-5 accent-text shrink-0" />
             <span className="text-zinc-300">{feature}</span>
           </li>
         ))}
@@ -48,10 +48,9 @@ export function PricingCard({
         href={ctaHref}
         className={`block text-center py-3 px-6 rounded-lg font-semibold transition-all ${
           highlighted
-            ? "cta-glow text-background"
+            ? "cta-glow accent-bg text-background"
             : "border border-zinc-600 hover:border-zinc-500"
         }`}
-        style={highlighted ? { background: "var(--neon-cyan)" } : undefined}
       >
         {ctaLabel}
       </Link>
