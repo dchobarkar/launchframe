@@ -122,7 +122,7 @@ export const creatorToolData: LandingPageData = {
           "Portify subdomain",
           "Basic templates",
         ],
-        ctaLabel: "Get started",
+        ctaLabel: "Get started free",
         ctaHref: "#pricing",
       },
       {
@@ -131,6 +131,7 @@ export const creatorToolData: LandingPageData = {
         period: "/mo",
         priceYearly: "$10",
         periodYearly: "/mo",
+        priceYearlyTotal: "$120",
         description: "For serious creators",
         features: [
           "Unlimited projects",
@@ -147,6 +148,9 @@ export const creatorToolData: LandingPageData = {
         name: "Studio",
         price: "$29",
         period: "/mo",
+        priceYearly: "$24",
+        periodYearly: "/mo",
+        priceYearlyTotal: "$288",
         description: "For agencies",
         features: [
           "Everything in Pro",

@@ -42,6 +42,7 @@ export interface PricingData {
   period: string;
   priceYearly?: string;
   periodYearly?: string;
+  priceYearlyTotal?: string;
   description: string;
   features: string[];
   ctaLabel: string;

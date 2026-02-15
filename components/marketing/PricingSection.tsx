@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { PricingCard } from "./PricingCard";
 import { PricingToggle } from "./PricingToggle";
+import { PlanActivationModal } from "@/components/ui/PlanActivationModal";
 import type { PricingData } from "@/data";
 
 export interface PricingSectionProps {
@@ -16,7 +17,13 @@ export function PricingSection({
   subtext,
   items,
 }: PricingSectionProps) {
-  const [billingPeriod, setBillingPeriod] = useState<"monthly" | "yearly">("monthly");
+  const [billingPeriod, setBillingPeriod] = useState<"monthly" | "yearly">(
+    "monthly",
+  );
+  const [activationModal, setActivationModal] = useState<{
+    planName: string;
+    ctaLabel: string;
+  } | null>(null);
 
   return (
     <section id="pricing" className="py-20 scroll-mt-20">
@@ -24,9 +31,7 @@ export function PricingSection({
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">{headline}</h2>
           <p className="text-zinc-400 max-w-2xl mx-auto">{subtext}</p>
-          <PricingToggle
-            onToggle={(period) => setBillingPeriod(period)}
-          />
+          <PricingToggle onToggle={(period) => setBillingPeriod(period)} />
         </div>
         <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {items.map((plan, i) => (
@@ -37,16 +42,28 @@ export function PricingSection({
               period={plan.period}
               priceYearly={plan.priceYearly}
               periodYearly={plan.periodYearly}
+              priceYearlyTotal={plan.priceYearlyTotal}
               description={plan.description}
               features={plan.features}
               ctaLabel={plan.ctaLabel}
               ctaHref={plan.ctaHref}
               highlighted={plan.highlighted}
               billingPeriod={billingPeriod}
+              onCtaClick={(planName, ctaLabel) =>
+                setActivationModal({ planName, ctaLabel })
+              }
             />
           ))}
         </div>
       </div>
+
+      {activationModal && (
+        <PlanActivationModal
+          planName={activationModal.planName}
+          ctaLabel={activationModal.ctaLabel}
+          onClose={() => setActivationModal(null)}
+        />
+      )}
     </section>
   );
 }

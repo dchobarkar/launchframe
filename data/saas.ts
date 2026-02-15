@@ -118,10 +118,10 @@ export const saasData: LandingPageData = {
         features: [
           "10K events/month",
           "3 dashboards",
-          "7-day retention",
+          "7-day data retention",
           "Community support",
         ],
-        ctaLabel: "Get started",
+        ctaLabel: "Get started free",
         ctaHref: "#pricing",
       },
       {
@@ -130,6 +130,7 @@ export const saasData: LandingPageData = {
         period: "/mo",
         priceYearly: "$79",
         periodYearly: "/mo",
+        priceYearlyTotal: "$948",
         description: "For growing teams",
         features: [
           "1M events/month",

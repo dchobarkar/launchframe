@@ -120,7 +120,7 @@ export const aiStartupData: LandingPageData = {
           "Email support",
           "Community access",
         ],
-        ctaLabel: "Get started",
+        ctaLabel: "Get started free",
         ctaHref: "#pricing",
       },
       {
@@ -129,6 +129,7 @@ export const aiStartupData: LandingPageData = {
         period: "/mo",
         priceYearly: "$23",
         periodYearly: "/mo",
+        priceYearlyTotal: "$276",
         description: "For power users",
         features: [
           "Unlimited tasks",
@@ -145,6 +146,9 @@ export const aiStartupData: LandingPageData = {
         name: "Team",
         price: "$79",
         period: "/mo",
+        priceYearly: "$63",
+        periodYearly: "/mo",
+        priceYearlyTotal: "$756",
         description: "For teams",
         features: [
           "Everything in Pro",
