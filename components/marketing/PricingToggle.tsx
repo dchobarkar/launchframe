@@ -8,7 +8,7 @@ export interface PricingToggleProps {
   onToggle?: (period: BillingPeriod) => void;
 }
 
-export function PricingToggle({ onToggle }: PricingToggleProps) {
+export const PricingToggle = ({ onToggle }: PricingToggleProps) => {
   const [period, setPeriod] = useState<BillingPeriod>("monthly");
 
   const handleToggle = () => {

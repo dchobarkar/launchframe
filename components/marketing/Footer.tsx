@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { NewsletterForm } from "@/components/ui/NewsletterForm";
+import NewsletterForm from "@/components/ui/NewsletterForm";
 import { SocialIconButton } from "@/components/ui/SocialIconButton";
 
 export interface FooterProps {
@@ -20,11 +20,11 @@ const defaultLegalLinks = [
   { label: "Terms", href: "#faq" },
 ];
 
-export function Footer({
+export const Footer = ({
   productName,
   navLinks = defaultNavLinks,
   legalLinks = defaultLegalLinks,
-}: FooterProps) {
+}: FooterProps) => {
   const socialLinks = [
     { iconKey: "Twitter" as const, href: "#", label: "Twitter" },
     { iconKey: "Github" as const, href: "#", label: "GitHub" },

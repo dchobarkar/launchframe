@@ -13,11 +13,11 @@ const isContactSales = (label: string) =>
   label.toLowerCase().includes("contact") ||
   label.toLowerCase().includes("sales");
 
-export function PlanActivationModal({
+const PlanActivationModal = ({
   planName,
   ctaLabel,
   onClose,
-}: PlanActivationModalProps) {
+}: PlanActivationModalProps) => {
   const [status, setStatus] = useState<"processing" | "success">("processing");
 
   useEffect(() => {
@@ -87,4 +87,6 @@ export function PlanActivationModal({
       </div>
     </div>
   );
-}
+};
+
+export default PlanActivationModal;

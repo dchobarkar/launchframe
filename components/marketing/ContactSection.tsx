@@ -9,11 +9,11 @@ export interface ContactSectionProps {
   id?: string;
 }
 
-export function ContactSection({
+export const ContactSection = ({
   headline,
   subtext,
   id = "contact",
-}: ContactSectionProps) {
+}: ContactSectionProps) => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",

@@ -18,7 +18,7 @@ export interface PricingCardProps {
   onCtaClick?: (planName: string, ctaLabel: string) => void;
 }
 
-export function PricingCard({
+export const PricingCard = ({
   name,
   price,
   period,
@@ -31,7 +31,7 @@ export function PricingCard({
   highlighted = false,
   billingPeriod = "monthly",
   onCtaClick,
-}: PricingCardProps) {
+}: PricingCardProps) => {
   const displayPrice =
     billingPeriod === "yearly" && priceYearly ? priceYearly : price;
   const displayPeriod =

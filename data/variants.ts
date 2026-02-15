@@ -70,7 +70,7 @@ const variantNavMap: Record<VariantSlug, NavConfig> = {
   marketing: marketingNavConfig,
 };
 
-export function getVariantConfig(slug: string): VariantConfig | null {
+export const getVariantConfig = (slug: string): VariantConfig | null => {
   if (!VARIANT_SLUGS.includes(slug as VariantSlug)) return null;
   const key = slug as VariantSlug;
   const metadata = variantMetadata[key];
@@ -82,21 +82,19 @@ export function getVariantConfig(slug: string): VariantConfig | null {
     metadata,
     productShowcaseId: productShowcaseIdMap[key] ?? "demo",
   };
-}
+};
 
-export function getVariantData(slug: string): LandingPageData | null {
-  return getVariantConfig(slug)?.data ?? null;
-}
+export const getVariantData = (slug: string): LandingPageData | null =>
+  getVariantConfig(slug)?.data ?? null;
 
-export function getNavConfig(slug: string): NavConfig | null {
-  return getVariantConfig(slug)?.navConfig ?? null;
-}
+export const getNavConfig = (slug: string): NavConfig | null =>
+  getVariantConfig(slug)?.navConfig ?? null;
 
 /** All sitemap routes derived from variant config */
-export function getSitemapRoutes(): string[] {
+export const getSitemapRoutes = (): string[] => {
   const routes: string[] = [""];
   for (const slug of VARIANT_SLUGS) {
     routes.push(`/${slug}`, `/${slug}/privacy`, `/${slug}/terms`);
   }
   return routes;
-}
+};

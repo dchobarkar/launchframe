@@ -19,7 +19,7 @@ export interface HeroBlockProps {
     | "marketing";
 }
 
-export function HeroBlock({
+export const HeroBlock = ({
   headline,
   subtext,
   primaryCta,
@@ -27,8 +27,7 @@ export function HeroBlock({
   trustBadges = [],
   announcementBanner,
   productMockup,
-}: HeroBlockProps) {
-  return (
+}: HeroBlockProps) => (
     <section className="relative min-h-[90vh] flex flex-col justify-center overflow-hidden">
       {/* Gradient background */}
       <div
@@ -102,5 +101,4 @@ export function HeroBlock({
         )}
       </div>
     </section>
-  );
-}
+);

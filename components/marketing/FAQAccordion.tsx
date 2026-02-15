@@ -13,7 +13,7 @@ export interface FAQAccordionProps {
   items: FAQItem[];
 }
 
-export function FAQAccordion({ headline, items }: FAQAccordionProps) {
+export const FAQAccordion = ({ headline, items }: FAQAccordionProps) => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (

@@ -9,7 +9,7 @@ interface IntegrationModalProps {
   onClose: () => void;
 }
 
-export function IntegrationModal({ name, onClose }: IntegrationModalProps) {
+const IntegrationModal = ({ name, onClose }: IntegrationModalProps) => {
   const [status, setStatus] = useState<"connecting" | "connected">(
     "connecting",
   );
@@ -70,4 +70,6 @@ export function IntegrationModal({ name, onClose }: IntegrationModalProps) {
       </div>
     </div>
   );
-}
+};
+
+export { IntegrationModal };

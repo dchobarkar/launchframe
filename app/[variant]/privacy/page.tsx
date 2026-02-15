@@ -1,11 +1,12 @@
 import { notFound } from "next/navigation";
 import { LegalPage } from "@/components/legal/LegalPage";
 import { privacyContent } from "@/data/legal";
-import { getLegalMetadata, getVariantConfig, VARIANT_SLUGS } from "@/data";
+import { getLegalMetadata } from "@/data/metadata";
+import { getVariantConfig, VARIANT_SLUGS } from "@/data/variants";
 
 type Props = { params: Promise<{ variant: string }> };
 
-export async function generateMetadata({ params }: Props) {
+export const generateMetadata = async ({ params }: Props) => {
   const { variant } = await params;
   const config = getVariantConfig(variant);
   if (!config) return {};
@@ -14,13 +15,13 @@ export async function generateMetadata({ params }: Props) {
     "privacy",
     `/${variant}/privacy`
   );
-}
+};
 
-export function generateStaticParams() {
+export const generateStaticParams = () => {
   return VARIANT_SLUGS.map((variant) => ({ variant }));
-}
+};
 
-export default async function PrivacyPage({ params }: Props) {
+const PrivacyPage = async ({ params }: Props) => {
   const { variant } = await params;
   const config = getVariantConfig(variant);
   if (!config) notFound();
@@ -34,4 +35,6 @@ export default async function PrivacyPage({ params }: Props) {
       productName={config.navConfig.productName}
     />
   );
-}
+};
+
+export default PrivacyPage;

@@ -8,13 +8,12 @@ export interface TestimonialCardProps {
   avatar?: string;
 }
 
-export function TestimonialCard({
+export const TestimonialCard = ({
   quote,
   author,
   role,
   company,
-}: TestimonialCardProps) {
-  return (
+}: TestimonialCardProps) => (
     <div className="glass-card p-5 sm:p-6 rounded-xl h-full flex flex-col">
       <Quote className="w-10 h-10 accent-text opacity-50 mb-4" />
       <p className="text-zinc-300 mb-6 flex-1 leading-relaxed">
@@ -32,5 +31,4 @@ export function TestimonialCard({
         </div>
       </div>
     </div>
-  );
-}
+);

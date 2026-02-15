@@ -1,23 +1,25 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { Nav, Footer } from "@/components/marketing";
-import { getVariantConfig, toMetadata, VARIANT_SLUGS } from "@/data";
+import { Nav } from "@/components/marketing/Nav";
+import { Footer } from "@/components/marketing/Footer";
+import { getVariantConfig, VARIANT_SLUGS } from "@/data/variants";
+import { toMetadata } from "@/data/metadata";
 import "@/styles/variants/index.css";
 
 type Props = { children: React.ReactNode; params: Promise<{ variant: string }> };
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export const generateMetadata = async ({ params }: Props): Promise<Metadata> => {
   const { variant } = await params;
   const config = getVariantConfig(variant);
   if (!config) return {};
   return toMetadata(config.metadata, `/${variant}`);
-}
+};
 
-export function generateStaticParams() {
+export const generateStaticParams = () => {
   return VARIANT_SLUGS.map((variant) => ({ variant }));
-}
+};
 
-export default async function VariantLayout({ children, params }: Props) {
+const VariantLayout = async ({ children, params }: Props) => {
   const { variant } = await params;
   const config = getVariantConfig(variant);
   if (!config) notFound();
@@ -38,4 +40,6 @@ export default async function VariantLayout({ children, params }: Props) {
       />
     </div>
   );
-}
+};
+
+export default VariantLayout;

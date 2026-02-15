@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { variantLinks, homeContent } from "@/data";
+import { variantLinks, homeContent } from "@/data/home";
 import { getVariantIcon } from "@/data/icons";
 
 export default function HomePage() {

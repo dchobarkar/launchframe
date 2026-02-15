@@ -17,11 +17,11 @@ export interface SocialIconButtonProps {
   href?: string;
 }
 
-export function SocialIconButton({
+export const SocialIconButton = ({
   iconKey,
   label,
   href = "#",
-}: SocialIconButtonProps) {
+}: SocialIconButtonProps) => {
   const Icon = ICON_MAP[iconKey];
   const [state, setState] = useState<"idle" | "loading" | "success">("idle");
 
@@ -52,4 +52,4 @@ export function SocialIconButton({
       )}
     </a>
   );
-}
+};

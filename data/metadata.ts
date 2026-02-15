@@ -206,11 +206,10 @@ export const variantMetadata: Record<string, PageMetadata> = {
 };
 
 /** Converts PageMetadata to Next.js Metadata with canonical URL */
-export function toMetadata(
+export const toMetadata = (
   meta: PageMetadata,
   path: string
-): Metadata {
-  return {
+): Metadata => ({
     title: meta.title,
     description: meta.description,
     keywords: meta.keywords,
@@ -222,15 +221,14 @@ export function toMetadata(
     alternates: {
       canonical: path,
     },
-  };
-}
+  });
 
 /** Legal page metadata (privacy, terms) */
-export function getLegalMetadata(
+export const getLegalMetadata = (
   productName: string,
   pageType: "privacy" | "terms",
   path: string
-): Metadata {
+): Metadata => {
   const title =
     pageType === "privacy"
       ? `Privacy Policy — ${productName}`
@@ -251,4 +249,4 @@ export function getLegalMetadata(
       follow: true,
     },
   };
-}
+};

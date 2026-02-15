@@ -7,13 +7,12 @@ export interface FeatureCardProps {
   highlighted?: boolean;
 }
 
-export function FeatureCard({
+export const FeatureCard = ({
   icon: Icon,
   title,
   description,
   highlighted = false,
-}: FeatureCardProps) {
-  return (
+}: FeatureCardProps) => (
     <div
       className={`feature-card-hover p-5 sm:p-6 rounded-xl ${
         highlighted
@@ -33,5 +32,4 @@ export function FeatureCard({
       <h3 className="text-lg font-semibold mb-2">{title}</h3>
       <p className="text-zinc-400 text-sm leading-relaxed">{description}</p>
     </div>
-  );
-}
+);

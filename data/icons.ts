@@ -48,10 +48,8 @@ export const VARIANT_ICONS: Record<string, LucideIcon> = {
   ArrowRight,
 };
 
-export function getFeatureIcon(key: string): LucideIcon {
-  return FEATURE_ICONS[key] ?? Zap;
-}
+export const getFeatureIcon = (key: string): LucideIcon =>
+  FEATURE_ICONS[key] ?? Zap;
 
-export function getVariantIcon(key: string): LucideIcon {
-  return VARIANT_ICONS[key] ?? BarChart3;
-}
+export const getVariantIcon = (key: string): LucideIcon =>
+  VARIANT_ICONS[key] ?? BarChart3;

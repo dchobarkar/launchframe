@@ -11,11 +11,11 @@ export interface IntegrationGridProps {
   integrations: { name: string }[];
 }
 
-export function IntegrationGrid({
+export const IntegrationGrid = ({
   headline,
   subtext,
   integrations,
-}: IntegrationGridProps) {
+}: IntegrationGridProps) => {
   const [selectedIntegration, setSelectedIntegration] = useState<string | null>(
     null,
   );

@@ -7,15 +7,14 @@ export interface SectionWithHeadlineProps {
   contentClassName?: string;
 }
 
-export function SectionWithHeadline({
+export const SectionWithHeadline = ({
   id,
   headline,
   subtext,
   children,
   className = "py-16 md:py-20",
   contentClassName,
-}: SectionWithHeadlineProps) {
-  return (
+}: SectionWithHeadlineProps) => (
     <section id={id} className={`${className} scroll-mt-20`}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 md:mb-16">
@@ -27,5 +26,4 @@ export function SectionWithHeadline({
         <div className={contentClassName}>{children}</div>
       </div>
     </section>
-  );
-}
+);

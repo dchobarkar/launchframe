@@ -51,7 +51,7 @@ const ICON_COMPONENTS: Record<
   SiSpotify,
 };
 
-function LogoItem({ name }: { name: string }) {
+const LogoItem = ({ name }: { name: string }) => {
   const key = LOGO_ICON_MAP[name];
   const isDomain = key?.includes(".");
   const [imgError, setImgError] = useState(false);
@@ -91,8 +91,7 @@ function LogoItem({ name }: { name: string }) {
   );
 }
 
-export function LogoCloud({ headline, logos }: LogoCloudProps) {
-  return (
+export const LogoCloud = ({ headline, logos }: LogoCloudProps) => (
     <section className="py-16 md:py-20 relative overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
 
@@ -118,5 +117,4 @@ export function LogoCloud({ headline, logos }: LogoCloudProps) {
         <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
       </div>
     </section>
-  );
-}
+);

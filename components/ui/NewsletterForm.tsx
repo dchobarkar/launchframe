@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-export function NewsletterForm() {
+const NewsletterForm = () => {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
@@ -47,4 +47,6 @@ export function NewsletterForm() {
       )}
     </form>
   );
-}
+};
+
+export default NewsletterForm;

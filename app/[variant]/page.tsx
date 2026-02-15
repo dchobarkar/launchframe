@@ -1,24 +1,23 @@
-import {
-  HeroBlock,
-  LogoCloud,
-  FeatureCard,
-  ProductShowcase,
-  IntegrationGrid,
-  PricingSection,
-  TestimonialCard,
-  ContactSection,
-  FAQAccordion,
-  CTASection,
-  SectionWithHeadline,
-} from "@/components/marketing";
-import { VariantMockup } from "@/components/ui/VariantMockup";
-import { ProductShowcaseMockup } from "@/components/ui/ProductShowcaseMockup";
-import { getVariantConfig, getFeatureIcon } from "@/data";
+import { HeroBlock } from "@/components/marketing/HeroBlock";
+import { LogoCloud } from "@/components/marketing/LogoCloud";
+import { FeatureCard } from "@/components/marketing/FeatureCard";
+import { ProductShowcase } from "@/components/marketing/ProductShowcase";
+import { IntegrationGrid } from "@/components/marketing/IntegrationGrid";
+import { PricingSection } from "@/components/marketing/PricingSection";
+import { TestimonialCard } from "@/components/marketing/TestimonialCard";
+import { ContactSection } from "@/components/marketing/ContactSection";
+import { FAQAccordion } from "@/components/marketing/FAQAccordion";
+import { CTASection } from "@/components/marketing/CTASection";
+import { SectionWithHeadline } from "@/components/marketing/SectionWithHeadline";
+import VariantMockup from "@/components/ui/VariantMockup";
+import ProductShowcaseMockup from "@/components/ui/ProductShowcaseMockup";
+import { getVariantConfig } from "@/data/variants";
+import { getFeatureIcon } from "@/data/icons";
 import { notFound } from "next/navigation";
 
 type Props = { params: Promise<{ variant: string }> };
 
-export default async function VariantPage({ params }: Props) {
+const VariantPage = async ({ params }: Props) => {
   const { variant } = await params;
   const config = getVariantConfig(variant);
   if (!config) notFound();
@@ -121,4 +120,6 @@ export default async function VariantPage({ params }: Props) {
       <ContactSection headline={contact.headline} subtext={contact.subtext} />
     </main>
   );
-}
+};
+
+export default VariantPage;
