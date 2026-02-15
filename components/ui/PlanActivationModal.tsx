@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Check, Loader2, Mail, X } from "lucide-react";
 
 interface PlanActivationModalProps {
@@ -19,11 +19,24 @@ const PlanActivationModal = ({
   onClose,
 }: PlanActivationModalProps) => {
   const [status, setStatus] = useState<"processing" | "success">("processing");
+  const dialogRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const timer = setTimeout(() => setStatus("success"), 1800);
     return () => clearTimeout(timer);
   }, []);
+
+  useEffect(() => {
+    dialogRef.current?.focus();
+  }, []);
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [onClose]);
 
   const isContact = isContactSales(ctaLabel);
 
@@ -31,9 +44,15 @@ const PlanActivationModal = ({
     <div
       className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/60 backdrop-blur-sm"
       onClick={onClose}
+      role="presentation"
     >
       <div
-        className="relative glass-card rounded-2xl p-5 sm:p-8 max-w-md w-full border border-white/10 shadow-2xl"
+        ref={dialogRef}
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="plan-modal-title"
+        tabIndex={-1}
+        className="relative glass-card rounded-2xl p-5 sm:p-8 max-w-md w-full border border-white/10 shadow-2xl outline-none focus:outline-none"
         onClick={(e) => e.stopPropagation()}
       >
         <button
@@ -49,7 +68,7 @@ const PlanActivationModal = ({
               <div className="w-16 h-16 rounded-full accent-bg-muted flex items-center justify-center mb-6">
                 <Loader2 className="w-8 h-8 accent-text animate-spin" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">
+              <h3 id="plan-modal-title" className="text-xl font-semibold mb-2">
                 {isContact ? "Sending your request..." : "Activating your plan"}
               </h3>
               <p className="text-zinc-400 text-sm">
@@ -67,7 +86,7 @@ const PlanActivationModal = ({
                   <Check className="w-8 h-8 text-green-400" />
                 )}
               </div>
-              <h3 className="text-xl font-semibold mb-2">
+              <h3 id="plan-modal-title" className="text-xl font-semibold mb-2">
                 {isContact ? "Request received!" : `${planName} activated`}
               </h3>
               <p className="text-zinc-400 text-sm">

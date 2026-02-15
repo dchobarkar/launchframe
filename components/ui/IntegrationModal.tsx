@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { X, Check, Loader2 } from "lucide-react";
 
 import { IntegrationLogo } from "@/components/ui/IntegrationLogo";
@@ -14,19 +14,38 @@ const IntegrationModal = ({ name, onClose }: IntegrationModalProps) => {
   const [status, setStatus] = useState<"connecting" | "connected">(
     "connecting",
   );
+  const dialogRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const timer = setTimeout(() => setStatus("connected"), 1500);
     return () => clearTimeout(timer);
   }, []);
 
+  useEffect(() => {
+    dialogRef.current?.focus();
+  }, []);
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [onClose]);
+
   return (
     <div
       className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/60 backdrop-blur-sm"
       onClick={onClose}
+      role="presentation"
     >
       <div
-        className="relative glass-card rounded-2xl p-5 sm:p-8 max-w-md w-full border border-white/10 shadow-2xl"
+        ref={dialogRef}
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="integration-modal-title"
+        tabIndex={-1}
+        className="relative glass-card rounded-2xl p-5 sm:p-8 max-w-md w-full border border-white/10 shadow-2xl outline-none focus:outline-none"
         onClick={(e) => e.stopPropagation()}
       >
         <button
@@ -41,7 +60,10 @@ const IntegrationModal = ({ name, onClose }: IntegrationModalProps) => {
           <div className="mb-6">
             <IntegrationLogo name={name} size="lg" />
           </div>
-          <h3 className="text-xl font-semibold mb-2">
+          <h3
+            id="integration-modal-title"
+            className="text-xl font-semibold mb-2"
+          >
             {status === "connecting" ? "Connecting to " : "Connected to "}
             {name}
           </h3>

@@ -29,14 +29,16 @@ export const HeroBlock = ({
   productMockup,
 }: HeroBlockProps) => (
   <section className="relative min-h-[90vh] flex flex-col justify-center overflow-hidden">
-    {/* Gradient background */}
     <div
       className="absolute inset-0 -z-10"
       style={{
         background: `linear-gradient(180deg, var(--gradient-start) 0%, var(--gradient-mid) 50%, var(--gradient-end) 100%)`,
       }}
     />
-    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-200 h-100 -z-10 opacity-30 blur-3xl accent-bg" />
+    <div
+      className="absolute top-0 left-1/2 -translate-x-1/2 w-200 h-100 -z-10 opacity-30 blur-3xl accent-bg"
+      aria-hidden
+    />
 
     {announcementBanner && (
       <div

@@ -23,33 +23,49 @@ export const FAQAccordion = ({ headline, items }: FAQAccordionProps) => {
           <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 md:mb-16">
             {headline}
           </h2>
-          <div className="space-y-2">
-            {items.map((item, i) => (
-              <div key={i} className="glass-card rounded-xl overflow-hidden">
-                <button
-                  onClick={() => setOpenIndex(openIndex === i ? null : i)}
-                  className="w-full px-4 sm:px-6 py-3.5 sm:py-4 flex items-center justify-between text-left hover:bg-white/5 transition-colors"
-                >
-                  <span className="font-medium">{item.question}</span>
-                  <ChevronDown
-                    className={`w-5 h-5 text-zinc-500 transition-transform ${
-                      openIndex === i ? "rotate-180" : ""
-                    }`}
-                  />
-                </button>
+          <div className="space-y-2" role="list">
+            {items.map((item, i) => {
+              const isOpen = openIndex === i;
+              const contentId = `faq-answer-${i}`;
+              return (
                 <div
-                  className={`grid transition-all duration-300 ease-out ${
-                    openIndex === i ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
-                  }`}
+                  key={i}
+                  className="glass-card rounded-xl overflow-hidden"
+                  role="listitem"
                 >
-                  <div className="overflow-hidden">
-                    <div className="px-4 sm:px-6 pb-4 text-zinc-400 text-sm">
-                      {item.answer}
+                  <button
+                    type="button"
+                    id={`faq-question-${i}`}
+                    onClick={() => setOpenIndex(isOpen ? null : i)}
+                    aria-expanded={isOpen}
+                    aria-controls={contentId}
+                    className="w-full px-4 sm:px-6 py-3.5 sm:py-4 flex items-center justify-between text-left hover:bg-white/5 transition-colors"
+                  >
+                    <span className="font-medium">{item.question}</span>
+                    <ChevronDown
+                      className={`w-5 h-5 text-zinc-500 transition-transform ${
+                        isOpen ? "rotate-180" : ""
+                      }`}
+                      aria-hidden
+                    />
+                  </button>
+                  <div
+                    id={contentId}
+                    role="region"
+                    aria-labelledby={`faq-question-${i}`}
+                    className={`grid transition-all duration-300 ease-out ${
+                      isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+                    }`}
+                  >
+                    <div className="overflow-hidden">
+                      <div className="px-4 sm:px-6 pb-4 text-zinc-400 text-sm">
+                        {item.answer}
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </div>
