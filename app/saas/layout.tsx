@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Nav, Footer } from "@/components/marketing";
+import { saasNavConfig } from "@/data";
 
 export const metadata: Metadata = {
   title: "MetricFlow — Analytics Platform for Modern Teams",
@@ -27,15 +28,11 @@ export default function SaaSLayout({
   return (
     <>
       <Nav
-        productName="MetricFlow"
-        links={[
-          { label: "Features", href: "#features" },
-          { label: "Pricing", href: "#pricing" },
-          { label: "Integrations", href: "#integrations" },
-        ]}
+        productName={saasNavConfig.productName}
+        links={saasNavConfig.links}
       />
       {children}
-      <Footer productName="MetricFlow" />
+      <Footer productName={saasNavConfig.productName} />
     </>
   );
 }

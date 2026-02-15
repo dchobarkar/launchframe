@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Nav, Footer } from "@/components/marketing";
+import { creatorToolNavConfig } from "@/data";
 
 export const metadata: Metadata = {
   title: "Portify — Portfolio Builder for Creators",
@@ -25,15 +26,11 @@ export default function CreatorToolLayout({
   return (
     <>
       <Nav
-        productName="Portify"
-        links={[
-          { label: "Features", href: "#features" },
-          { label: "Pricing", href: "#pricing" },
-          { label: "Templates", href: "#templates" },
-        ]}
+        productName={creatorToolNavConfig.productName}
+        links={creatorToolNavConfig.links}
       />
       {children}
-      <Footer productName="Portify" />
+      <Footer productName={creatorToolNavConfig.productName} />
     </>
   );
 }
