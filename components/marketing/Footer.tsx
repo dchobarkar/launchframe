@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { Github, Twitter, Linkedin } from "lucide-react";
 import { NewsletterForm } from "@/components/ui/NewsletterForm";
+import { SocialIconButton } from "@/components/ui/SocialIconButton";
 
 export interface FooterProps {
   productName: string;
@@ -25,9 +25,9 @@ export function Footer({
   legalLinks = defaultLegalLinks,
 }: FooterProps) {
   const socialLinks = [
-    { icon: Twitter, href: "#", label: "Twitter" },
-    { icon: Github, href: "#", label: "GitHub" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
+    { iconKey: "Twitter" as const, href: "#", label: "Twitter" },
+    { iconKey: "Github" as const, href: "#", label: "GitHub" },
+    { iconKey: "Linkedin" as const, href: "#", label: "LinkedIn" },
   ];
 
   return (
@@ -40,15 +40,13 @@ export function Footer({
               Build, launch, and scale your product with confidence.
             </p>
             <div className="flex gap-4">
-              {socialLinks.map(({ icon: Icon, href, label }) => (
-                <a
+              {socialLinks.map(({ iconKey, href, label }) => (
+                <SocialIconButton
                   key={label}
+                  iconKey={iconKey}
+                  label={label}
                   href={href}
-                  aria-label={label}
-                  className="w-10 h-10 rounded-lg glass-card flex items-center justify-center text-zinc-400 accent-hover transition-colors"
-                >
-                  <Icon className="w-5 h-5" />
-                </a>
+                />
               ))}
             </div>
           </div>

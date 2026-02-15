@@ -41,7 +41,7 @@ export function Nav({ productName, links = [] }: NavProps) {
               </>
             )}
             <Link
-              href="#pricing"
+              href={links.find((l) => l.label === "Pricing")?.href ?? "#pricing"}
               className="text-sm font-medium px-4 py-2 rounded-lg accent-bg-muted accent-text hover:accent-bg-muted-strong transition-colors"
             >
               Get Started
