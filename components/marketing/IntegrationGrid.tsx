@@ -1,5 +1,9 @@
 "use client";
 
+/**
+ * Integration grid. Clicking an integration opens a demo modal.
+ * Uses IntegrationLogo (icons or Clearbit) and IntegrationModal.
+ */
 import { useState } from "react";
 import { Plug, Plus } from "lucide-react";
 

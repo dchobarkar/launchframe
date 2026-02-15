@@ -1,5 +1,6 @@
 import { Check } from "lucide-react";
 
+/** Single pricing plan card. Supports monthly/yearly display and optional onCtaClick. */
 export interface PricingCardProps {
   name: string;
   price: string;

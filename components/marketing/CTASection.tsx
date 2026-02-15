@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+/** Final CTA section with primary and optional secondary button. */
 export interface CTASectionProps {
   headline: string;
   subtext?: string;

@@ -1,5 +1,10 @@
 import type { NextConfig } from "next";
 
+/**
+ * Next.js configuration for LaunchFrame.
+ * - Images: Clearbit logos for integration/logo cloud components
+ * - Headers: Security headers applied to all routes
+ */
 const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
@@ -7,7 +12,7 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "logo.clearbit.com",
         pathname: "/**",
-      },
+      }, // Clearbit logo API for brand logos
     ],
   },
   async headers() {
@@ -15,9 +20,12 @@ const nextConfig: NextConfig = {
       {
         source: "/:path*",
         headers: [
-          { key: "X-Frame-Options", value: "DENY" },
-          { key: "X-Content-Type-Options", value: "nosniff" },
-          { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+          { key: "X-Frame-Options", value: "DENY" }, // Prevent clickjacking
+          { key: "X-Content-Type-Options", value: "nosniff" }, // Prevent MIME sniffing
+          {
+            key: "Referrer-Policy",
+            value: "strict-origin-when-cross-origin",
+          },
         ],
       },
     ];

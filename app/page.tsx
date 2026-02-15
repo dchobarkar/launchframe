@@ -1,3 +1,6 @@
+/**
+ * Home page. Lists all variant demos with links to /[variant].
+ */
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 

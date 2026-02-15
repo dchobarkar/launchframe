@@ -1,3 +1,6 @@
+/**
+ * Variant landing page. Renders full landing page from variant data.
+ */
 import { notFound } from "next/navigation";
 
 import { HeroBlock } from "@/components/marketing/HeroBlock";

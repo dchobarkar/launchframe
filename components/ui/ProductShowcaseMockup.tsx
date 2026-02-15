@@ -1,3 +1,4 @@
+/** Static mockup content for ProductShowcase, varies by variant. */
 interface ProductShowcaseMockupProps {
   variant:
     | "saas"

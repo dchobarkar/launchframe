@@ -1,3 +1,4 @@
+/** Global loading UI shown during route transitions. */
 export default function Loading() {
   return (
     <main className="min-h-screen flex flex-col items-center justify-center px-4">

@@ -1,5 +1,9 @@
 "use client";
 
+/**
+ * Pricing section with monthly/yearly toggle and plan cards.
+ * Opens PlanActivationModal on CTA click (demo flow).
+ */
 import { useState } from "react";
 
 import { PricingCard } from "./PricingCard";

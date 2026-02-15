@@ -1,5 +1,9 @@
 "use client";
 
+/**
+ * Brand logo: Simple Icons, Clearbit, or fallback to first letter.
+ * Uses LOGO_ICON_MAP to resolve name → icon key or domain.
+ */
 import { useState } from "react";
 import Image from "next/image";
 import {

@@ -1,3 +1,5 @@
+/** Shared types for landing page data. */
+
 export interface CtaLink {
   label: string;
   href: string;
@@ -88,6 +90,7 @@ export interface ContactData {
   subtext?: string;
 }
 
+/** Full data structure for a variant landing page. */
 export interface LandingPageData {
   variant:
     | "saas"

@@ -1,5 +1,6 @@
 import { Quote } from "lucide-react";
 
+/** Testimonial card with quote, author, role, and company. */
 export interface TestimonialCardProps {
   quote: string;
   author: string;

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 
+/** Footer newsletter signup. Demo: validates email, shows success. Wire to your list in production. */
 const NewsletterForm = () => {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<

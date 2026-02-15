@@ -1,8 +1,11 @@
+/** Shared legal page content structure. */
+
 export interface LegalSection {
   title: string;
   content: string[];
 }
 
+/** Privacy policy sections. Replace with your own content. */
 export const privacyContent: LegalSection[] = [
   {
     title: "Information We Collect",
@@ -46,6 +49,7 @@ export const privacyContent: LegalSection[] = [
   },
 ];
 
+/** Terms of service sections. Replace with your own content. */
 export const termsContent: LegalSection[] = [
   {
     title: "Acceptance of Terms",

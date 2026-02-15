@@ -1,3 +1,6 @@
+/**
+ * Variant layout. Wraps all /[variant] routes with Nav, Footer, and variant-specific CSS.
+ */
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 

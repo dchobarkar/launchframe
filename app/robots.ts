@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 
 import { SITE_URL } from "@/data/metadata";
 
+/** Generates robots.txt for crawlers. */
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: {

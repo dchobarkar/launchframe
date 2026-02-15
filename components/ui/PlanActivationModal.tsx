@@ -1,5 +1,9 @@
 "use client";
 
+/**
+ * Demo modal for plan activation. Simulates processing → success.
+ * Detects "Contact sales" CTA for different copy. Accessible dialog.
+ */
 import { useEffect, useRef, useState } from "react";
 import { Check, Loader2, Mail, X } from "lucide-react";
 

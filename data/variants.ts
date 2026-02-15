@@ -1,3 +1,7 @@
+/**
+ * Central variant configuration. Maps slugs to data, nav, and metadata.
+ * Add new variants by extending VARIANT_SLUGS and the maps below.
+ */
 import type { LandingPageData } from "./types";
 import type { NavConfig } from "./nav";
 import type { PageMetadata } from "./metadata";
@@ -21,6 +25,7 @@ import {
 } from "./nav";
 import { variantMetadata } from "./metadata";
 
+/** All supported variant slugs. Used for routing and static generation. */
 export const VARIANT_SLUGS = [
   "saas",
   "ai-startup",
@@ -42,6 +47,7 @@ export interface VariantConfig {
   productShowcaseId?: string;
 }
 
+/** Variants with custom product showcase section IDs (for anchor links). */
 const productShowcaseIdMap: Partial<Record<VariantSlug, string>> = {
   "creator-tool": "templates",
   agency: "work",
@@ -69,6 +75,7 @@ const variantNavMap: Record<VariantSlug, NavConfig> = {
   marketing: marketingNavConfig,
 };
 
+/** Returns full config for a variant slug, or null if invalid. */
 export const getVariantConfig = (slug: string): VariantConfig | null => {
   if (!VARIANT_SLUGS.includes(slug as VariantSlug)) return null;
   const key = slug as VariantSlug;
@@ -89,6 +96,7 @@ export const getVariantData = (slug: string): LandingPageData | null =>
 export const getNavConfig = (slug: string): NavConfig | null =>
   getVariantConfig(slug)?.navConfig ?? null;
 
+/** Returns all routes for sitemap generation. */
 export const getSitemapRoutes = (): string[] => {
   const routes: string[] = [""];
   for (const slug of VARIANT_SLUGS) {

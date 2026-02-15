@@ -1,5 +1,6 @@
 import { LucideIcon } from "lucide-react";
 
+/** Feature card with icon, title, description. Optional highlighted style. */
 export interface FeatureCardProps {
   icon: LucideIcon;
   title: string;

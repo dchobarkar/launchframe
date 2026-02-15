@@ -1,5 +1,9 @@
 "use client";
 
+/**
+ * Demo modal for integration "connect" flow. Simulates connecting → connected.
+ * Accessible: role="dialog", aria-modal, focus trap, Escape to close.
+ */
 import { useEffect, useRef, useState } from "react";
 import { X, Check, Loader2 } from "lucide-react";
 

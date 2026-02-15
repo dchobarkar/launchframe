@@ -1,5 +1,8 @@
+"use client";
+
 import { ArrowLeft } from "lucide-react";
 
+/** Button that navigates back via history.back(). Used on 404 page. */
 export const BackButton = () => (
   <button
     type="button"

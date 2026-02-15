@@ -1,3 +1,8 @@
+/**
+ * Maps brand names to logo sources.
+ * - Simple Icons key (e.g. "SiStripe") → use icon component
+ * - Domain (e.g. "microsoft.com") → use Clearbit logo API
+ */
 export const LOGO_ICON_MAP: Record<string, string> = {
   Stripe: "SiStripe",
   Vercel: "SiVercel",

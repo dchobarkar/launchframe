@@ -1,3 +1,6 @@
+/**
+ * Terms of service page for each variant.
+ */
 import { notFound } from "next/navigation";
 
 import { LegalPage } from "@/components/legal/LegalPage";

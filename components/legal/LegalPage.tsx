@@ -2,6 +2,7 @@ import Link from "next/link";
 
 import type { LegalSection } from "@/data/legal";
 
+/** Legal page layout (privacy, terms) with back link and sectioned content. */
 export interface LegalPageProps {
   title: string;
   lastUpdated: string;

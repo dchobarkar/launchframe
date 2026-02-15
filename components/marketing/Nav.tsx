@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+/** Fixed top nav with product name, links, and Get Started CTA. */
 export interface NavProps {
   productName: string;
   links?: { label: string; href: string }[];

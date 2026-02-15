@@ -1,5 +1,6 @@
 import { Monitor } from "lucide-react";
 
+/** Product showcase section with mockup and feature list. */
 export interface ProductShowcaseProps {
   headline: string;
   subtext?: string;

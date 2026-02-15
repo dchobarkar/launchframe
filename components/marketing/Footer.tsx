@@ -3,6 +3,7 @@ import Link from "next/link";
 import NewsletterForm from "@/components/ui/NewsletterForm";
 import { SocialIconButton } from "@/components/ui/SocialIconButton";
 
+/** Footer with product info, nav links, legal links, social icons, and newsletter. */
 export interface FooterProps {
   productName: string;
   navLinks?: { label: string; href: string }[];

@@ -1,3 +1,6 @@
+/**
+ * 404 page shown when a route is not found.
+ */
 import Link from "next/link";
 import { Home } from "lucide-react";
 

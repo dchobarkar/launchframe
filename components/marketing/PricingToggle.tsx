@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 
+/** Monthly/yearly billing toggle. Calls onToggle when switched. */
 export type BillingPeriod = "monthly" | "yearly";
 
 export interface PricingToggleProps {

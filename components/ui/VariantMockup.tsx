@@ -2,6 +2,7 @@ import { Bot } from "lucide-react";
 
 import ProductMockup from "./ProductMockup";
 
+/** Hero product mockup. Renders variant-specific placeholder UI inside ProductMockup. */
 interface VariantMockupProps {
   variant:
     | "saas"

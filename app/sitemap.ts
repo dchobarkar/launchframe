@@ -3,6 +3,7 @@ import type { MetadataRoute } from "next";
 import { SITE_URL } from "@/data/metadata";
 import { getSitemapRoutes } from "@/data/variants";
 
+/** Generates sitemap.xml from variant routes. */
 export default function sitemap(): MetadataRoute.Sitemap {
   const routes = getSitemapRoutes();
   return routes.map((route) => ({

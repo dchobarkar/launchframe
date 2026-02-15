@@ -1,5 +1,9 @@
 "use client";
 
+/**
+ * Contact form section. Demo: validates email and shows success state.
+ * Wire to your backend or form service in production.
+ */
 import { useState } from "react";
 import { Loader2, Check } from "lucide-react";
 

@@ -1,5 +1,9 @@
 "use client";
 
+/**
+ * Root-level error boundary. Catches errors in the root layout.
+ * Must define its own html/body (root layout is not rendered).
+ */
 export default function GlobalError({
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   error,

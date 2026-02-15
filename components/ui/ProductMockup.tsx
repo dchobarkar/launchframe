@@ -1,3 +1,4 @@
+/** Browser-style mockup wrapper (traffic lights + content area). */
 const ProductMockup = ({ children }: { children: React.ReactNode }) => (
   <div className="bg-zinc-900/80 p-4 sm:p-6">
     <div className="flex gap-2 mb-4">

@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+
+/** Social link with demo loading/success animation on click. */
 import { Loader2, Check, Github, Twitter, Linkedin } from "lucide-react";
 
 const ICON_MAP = {

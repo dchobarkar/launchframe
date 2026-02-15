@@ -1,5 +1,6 @@
 "use client";
 
+/** FAQ accordion. First item open by default. Uses aria-expanded for accessibility. */
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 

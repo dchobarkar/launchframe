@@ -1,3 +1,4 @@
+/** Reusable section wrapper with centered headline and subtext. */
 export interface SectionWithHeadlineProps {
   id?: string;
   headline: string;

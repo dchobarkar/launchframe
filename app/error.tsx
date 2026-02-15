@@ -1,5 +1,9 @@
 "use client";
 
+/**
+ * Error boundary for route segments. Catches runtime errors and shows
+ * a retry UI. Logs error to console for debugging.
+ */
 import { useEffect } from "react";
 import Link from "next/link";
 import { AlertCircle, Home, RefreshCw } from "lucide-react";

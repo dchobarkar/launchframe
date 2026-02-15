@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 
+/** Base URL for the site. Set via NEXT_PUBLIC_SITE_URL or falls back to default. */
 export const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL ?? "https://launchframe-plum.vercel.app";
 
+/** Metadata shape for variant and legal pages. */
 export interface PageMetadata {
   title: string;
   description: string;
@@ -19,6 +21,7 @@ export interface PageMetadata {
   };
 }
 
+/** Root metadata for the home page and default fallbacks. */
 export const rootMetadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
@@ -68,6 +71,7 @@ export const rootMetadata: Metadata = {
   },
 };
 
+/** Per-variant metadata for SEO (title, description, OG, Twitter). */
 export const variantMetadata: Record<string, PageMetadata> = {
   saas: {
     title: "MetricFlow — Analytics Platform for Modern Teams",
@@ -209,6 +213,7 @@ export const variantMetadata: Record<string, PageMetadata> = {
   },
 };
 
+/** Converts PageMetadata to Next.js Metadata with canonical URL. */
 export const toMetadata = (meta: PageMetadata, path: string): Metadata => ({
   title: meta.title,
   description: meta.description,
@@ -223,6 +228,7 @@ export const toMetadata = (meta: PageMetadata, path: string): Metadata => ({
   },
 });
 
+/** Builds metadata for privacy and terms pages. */
 export const getLegalMetadata = (
   productName: string,
   pageType: "privacy" | "terms",

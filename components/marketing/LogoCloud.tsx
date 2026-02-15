@@ -1,5 +1,9 @@
 "use client";
 
+/**
+ * Logo cloud section. Renders brand logos from Simple Icons or Clearbit.
+ * Falls back to first letter if logo not found.
+ */
 import { useState } from "react";
 import Image from "next/image";
 import {
