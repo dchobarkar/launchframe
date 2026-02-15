@@ -16,4 +16,12 @@ export const LOGO_ICON_MAP: Record<string, string> = {
   Medium: "SiMedium",
   Substack: "SiSubstack",
   YouTube: "SiYoutube",
+  Slack: "slack.com",
+  Zapier: "SiZapier",
+  Segment: "segment.com",
+  Snowflake: "SiSnowflake",
+  BigQuery: "cloud.google.com",
+  Gmail: "SiGmail",
+  "Google Drive": "SiGoogledrive",
+  Vimeo: "SiVimeo",
 };
