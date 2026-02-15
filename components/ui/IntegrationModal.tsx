@@ -7,7 +7,7 @@
 import { useEffect, useRef, useState } from "react";
 import { X, Check, Loader2 } from "lucide-react";
 
-import { IntegrationLogo } from "@/components/ui/IntegrationLogo";
+import IntegrationLogo from "@/components/ui/IntegrationLogo";
 
 interface IntegrationModalProps {
   name: string;
@@ -99,4 +99,4 @@ const IntegrationModal = ({ name, onClose }: IntegrationModalProps) => {
   );
 };
 
-export { IntegrationModal };
+export default IntegrationModal;

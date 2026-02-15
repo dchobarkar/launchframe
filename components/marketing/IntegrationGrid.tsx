@@ -7,8 +7,8 @@
 import { useState } from "react";
 import { Plug, Plus } from "lucide-react";
 
-import { IntegrationLogo } from "@/components/ui/IntegrationLogo";
-import { IntegrationModal } from "@/components/ui/IntegrationModal";
+import IntegrationLogo from "@/components/ui/IntegrationLogo";
+import IntegrationModal from "@/components/ui/IntegrationModal";
 
 export interface IntegrationGridProps {
   headline: string;
@@ -16,7 +16,7 @@ export interface IntegrationGridProps {
   integrations: { name: string }[];
 }
 
-export const IntegrationGrid = ({
+const IntegrationGrid = ({
   headline,
   subtext,
   integrations,
@@ -69,3 +69,5 @@ export const IntegrationGrid = ({
     </section>
   );
 };
+
+export default IntegrationGrid;

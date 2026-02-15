@@ -1,5 +1,5 @@
 /** Global loading UI shown during route transitions. */
-export default function Loading() {
+const Loading = () => {
   return (
     <main className="min-h-screen flex flex-col items-center justify-center px-4">
       <div
@@ -12,4 +12,6 @@ export default function Loading() {
       <p className="mt-4 text-zinc-500 text-sm">Loading...</p>
     </main>
   );
-}
+};
+
+export default Loading;

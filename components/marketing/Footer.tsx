@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 import NewsletterForm from "@/components/ui/NewsletterForm";
-import { SocialIconButton } from "@/components/ui/SocialIconButton";
+import SocialIconButton from "@/components/ui/SocialIconButton";
 
 /** Footer with product info, nav links, legal links, social icons, and newsletter. */
 export interface FooterProps {
@@ -22,7 +22,7 @@ const defaultLegalLinks = [
   { label: "Terms", href: "#faq" },
 ];
 
-export const Footer = ({
+const Footer = ({
   productName,
   navLinks = defaultNavLinks,
   legalLinks = defaultLegalLinks,
@@ -116,3 +116,5 @@ export const Footer = ({
     </footer>
   );
 };
+
+export default Footer;

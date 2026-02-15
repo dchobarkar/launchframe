@@ -3,7 +3,7 @@
  */
 import { notFound } from "next/navigation";
 
-import { LegalPage } from "@/components/legal/LegalPage";
+import LegalPage from "@/components/legal/LegalPage";
 import { termsContent } from "@/data/legal";
 import { getLegalMetadata } from "@/data/metadata";
 import { getVariantConfig, VARIANT_SLUGS } from "@/data/variants";

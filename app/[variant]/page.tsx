@@ -3,17 +3,17 @@
  */
 import { notFound } from "next/navigation";
 
-import { HeroBlock } from "@/components/marketing/HeroBlock";
-import { LogoCloud } from "@/components/marketing/LogoCloud";
-import { FeatureCard } from "@/components/marketing/FeatureCard";
-import { ProductShowcase } from "@/components/marketing/ProductShowcase";
-import { IntegrationGrid } from "@/components/marketing/IntegrationGrid";
-import { PricingSection } from "@/components/marketing/PricingSection";
-import { TestimonialCard } from "@/components/marketing/TestimonialCard";
-import { ContactSection } from "@/components/marketing/ContactSection";
-import { FAQAccordion } from "@/components/marketing/FAQAccordion";
-import { CTASection } from "@/components/marketing/CTASection";
-import { SectionWithHeadline } from "@/components/marketing/SectionWithHeadline";
+import HeroBlock from "@/components/marketing/HeroBlock";
+import LogoCloud from "@/components/marketing/LogoCloud";
+import FeatureCard from "@/components/marketing/FeatureCard";
+import ProductShowcase from "@/components/marketing/ProductShowcase";
+import IntegrationGrid from "@/components/marketing/IntegrationGrid";
+import PricingSection from "@/components/marketing/PricingSection";
+import TestimonialCard from "@/components/marketing/TestimonialCard";
+import ContactSection from "@/components/marketing/ContactSection";
+import FAQAccordion from "@/components/marketing/FAQAccordion";
+import CTASection from "@/components/marketing/CTASection";
+import SectionWithHeadline from "@/components/marketing/SectionWithHeadline";
 import VariantMockup from "@/components/ui/VariantMockup";
 import ProductShowcaseMockup from "@/components/ui/ProductShowcaseMockup";
 import { getVariantConfig } from "@/data/variants";

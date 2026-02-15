@@ -72,10 +72,7 @@ const sizeMap = {
   lg: { container: "w-16 h-16", icon: 36 },
 };
 
-export const IntegrationLogo = ({
-  name,
-  size = "sm",
-}: IntegrationLogoProps) => {
+const IntegrationLogo = ({ name, size = "sm" }: IntegrationLogoProps) => {
   const key = LOGO_ICON_MAP[name];
   const isDomain = key?.includes(".");
   const IconComponent = key && !isDomain ? ICON_COMPONENTS[key] : null;
@@ -121,3 +118,5 @@ export const IntegrationLogo = ({
     </div>
   );
 };
+
+export default IntegrationLogo;

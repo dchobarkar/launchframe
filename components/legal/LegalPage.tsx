@@ -11,7 +11,7 @@ export interface LegalPageProps {
   productName: string;
 }
 
-export const LegalPage = ({
+const LegalPage = ({
   title,
   lastUpdated,
   sections,
@@ -51,3 +51,5 @@ export const LegalPage = ({
     </div>
   </main>
 );
+
+export default LegalPage;

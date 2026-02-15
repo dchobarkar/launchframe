@@ -8,7 +8,7 @@ export interface FeatureCardProps {
   highlighted?: boolean;
 }
 
-export const FeatureCard = ({
+const FeatureCard = ({
   icon: Icon,
   title,
   description,
@@ -34,3 +34,5 @@ export const FeatureCard = ({
     <p className="text-zinc-400 text-sm leading-relaxed">{description}</p>
   </div>
 );
+
+export default FeatureCard;

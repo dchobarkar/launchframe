@@ -8,7 +8,7 @@ export interface CTASectionProps {
   secondaryCta?: { label: string; href: string };
 }
 
-export const CTASection = ({
+const CTASection = ({
   headline,
   subtext,
   primaryCta,
@@ -43,3 +43,5 @@ export const CTASection = ({
     </div>
   </section>
 );
+
+export default CTASection;

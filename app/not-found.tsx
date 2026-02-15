@@ -4,9 +4,9 @@
 import Link from "next/link";
 import { Home } from "lucide-react";
 
-import { BackButton } from "@/components/ui/BackButton";
+import BackButton from "@/components/ui/BackButton";
 
-export default function NotFound() {
+const NotFound = () => {
   return (
     <main className="min-h-screen flex flex-col items-center justify-center px-4">
       <div
@@ -34,4 +34,6 @@ export default function NotFound() {
       </div>
     </main>
   );
-}
+};
+
+export default NotFound;

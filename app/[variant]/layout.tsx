@@ -4,8 +4,8 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
-import { Nav } from "@/components/marketing/Nav";
-import { Footer } from "@/components/marketing/Footer";
+import Nav from "@/components/marketing/Nav";
+import Footer from "@/components/marketing/Footer";
 import { getVariantConfig, VARIANT_SLUGS } from "@/data/variants";
 import { toMetadata } from "@/data/metadata";
 

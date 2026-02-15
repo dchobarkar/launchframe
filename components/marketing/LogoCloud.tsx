@@ -95,7 +95,7 @@ const LogoItem = ({ name }: { name: string }) => {
   );
 };
 
-export const LogoCloud = ({ headline, logos }: LogoCloudProps) => (
+const LogoCloud = ({ headline, logos }: LogoCloudProps) => (
   <section className="py-16 md:py-20 relative overflow-hidden">
     <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
 
@@ -122,3 +122,5 @@ export const LogoCloud = ({ headline, logos }: LogoCloudProps) => (
     </div>
   </section>
 );
+
+export default LogoCloud;

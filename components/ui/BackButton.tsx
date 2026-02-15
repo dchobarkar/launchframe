@@ -3,7 +3,7 @@
 import { ArrowLeft } from "lucide-react";
 
 /** Button that navigates back via history.back(). Used on 404 page. */
-export const BackButton = () => (
+const BackButton = () => (
   <button
     type="button"
     onClick={() => window.history.back()}
@@ -13,3 +13,5 @@ export const BackButton = () => (
     Go back
   </button>
 );
+
+export default BackButton;

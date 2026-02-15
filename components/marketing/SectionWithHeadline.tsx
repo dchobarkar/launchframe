@@ -8,7 +8,7 @@ export interface SectionWithHeadlineProps {
   contentClassName?: string;
 }
 
-export const SectionWithHeadline = ({
+const SectionWithHeadline = ({
   id,
   headline,
   subtext,
@@ -28,3 +28,5 @@ export const SectionWithHeadline = ({
     </div>
   </section>
 );
+
+export default SectionWithHeadline;

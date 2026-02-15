@@ -9,7 +9,7 @@ export interface ProductShowcaseProps {
   id?: string;
 }
 
-export const ProductShowcase = ({
+const ProductShowcase = ({
   headline,
   subtext,
   mockup,
@@ -55,3 +55,5 @@ export const ProductShowcase = ({
     </div>
   </section>
 );
+
+export default ProductShowcase;

@@ -13,7 +13,7 @@ export interface ContactSectionProps {
   id?: string;
 }
 
-export const ContactSection = ({
+const ContactSection = ({
   headline,
   subtext,
   id = "contact",
@@ -174,3 +174,5 @@ export const ContactSection = ({
     </section>
   );
 };
+
+export default ContactSection;

@@ -9,7 +9,7 @@ export interface TestimonialCardProps {
   avatar?: string;
 }
 
-export const TestimonialCard = ({
+const TestimonialCard = ({
   quote,
   author,
   role,
@@ -33,3 +33,5 @@ export const TestimonialCard = ({
     </div>
   </div>
 );
+
+export default TestimonialCard;

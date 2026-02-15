@@ -17,7 +17,7 @@ export interface PricingCardProps {
   onCtaClick?: (planName: string, ctaLabel: string) => void;
 }
 
-export const PricingCard = ({
+const PricingCard = ({
   name,
   price,
   period,
@@ -85,3 +85,5 @@ export const PricingCard = ({
     </div>
   );
 };
+
+export default PricingCard;

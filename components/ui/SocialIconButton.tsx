@@ -19,7 +19,7 @@ export interface SocialIconButtonProps {
   href?: string;
 }
 
-export const SocialIconButton = ({
+const SocialIconButton = ({
   iconKey,
   label,
   href = "#",
@@ -53,3 +53,5 @@ export const SocialIconButton = ({
     </a>
   );
 };
+
+export default SocialIconButton;

@@ -6,8 +6,8 @@
  */
 import { useState } from "react";
 
-import { PricingCard } from "./PricingCard";
-import { PricingToggle } from "./PricingToggle";
+import PricingCard from "./PricingCard";
+import PricingToggle from "./PricingToggle";
 import PlanActivationModal from "@/components/ui/PlanActivationModal";
 import type { PricingData } from "@/data/types";
 
@@ -17,11 +17,7 @@ export interface PricingSectionProps {
   items: PricingData[];
 }
 
-export const PricingSection = ({
-  headline,
-  subtext,
-  items,
-}: PricingSectionProps) => {
+const PricingSection = ({ headline, subtext, items }: PricingSectionProps) => {
   const [billingPeriod, setBillingPeriod] = useState<"monthly" | "yearly">(
     "monthly",
   );
@@ -74,3 +70,5 @@ export const PricingSection = ({
     </section>
   );
 };
+
+export default PricingSection;

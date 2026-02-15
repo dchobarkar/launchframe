@@ -20,7 +20,7 @@ export interface HeroBlockProps {
     | "marketing";
 }
 
-export const HeroBlock = ({
+const HeroBlock = ({
   headline,
   subtext,
   primaryCta,
@@ -37,7 +37,7 @@ export const HeroBlock = ({
       }}
     />
     <div
-      className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] -z-10 opacity-30 blur-3xl accent-bg"
+      className="absolute top-0 left-1/2 -translate-x-1/2 w-200 h-100 -z-10 opacity-30 blur-3xl accent-bg"
       aria-hidden
     />
 
@@ -105,3 +105,5 @@ export const HeroBlock = ({
     </div>
   </section>
 );
+
+export default HeroBlock;
